@@ -1,0 +1,1 @@
+-force-include-file "EPH5275_PNP.c";"e:\CE7\Software\CE7_GTS2024\EPH5275_PNP.c" -force-include-file "EPH5275_PNP.h";"e:\CE7\Software\CE7_GTS2024\EPH5275_PNP.h" -force-include-file "ftd2xx_wp.h";"e:\CE7\Software\CE7_GTS2024\ftd2xx_wp.h" 

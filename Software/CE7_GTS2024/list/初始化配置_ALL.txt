@@ -1,0 +1,13 @@
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\VA复位2指令.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\config70-fee0.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\config70-fee1.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\config70-fee2.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\config70-fee3.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\config70-fee4.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\config70-fee5.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\config70-fee6.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\config70-fee7.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\FPGA配置-采集控制通道-ram地址-触发延时-03.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\FPGA配置-采集阈值-大信号阈值-2F.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\FPGA配置-大信号锁定-时间-逐事例通道-0F.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\FPGA配置-特殊探头敞开-封闭-C0.bin

@@ -1,0 +1,276 @@
+[LoadDLL]
+Class="Function"
+Prototype="int LoadDLL();"
+
+[FreeDLL]
+Class="Function"
+Prototype="int FreeDLL();"
+
+[open]
+Class="Function"
+Prototype="unsigned long open(int DeviceID);"
+
+[Read]
+Class="Function"
+Prototype="unsigned long Read(void *lpvBuffer, unsigned long dwBuffSize, unsigned long *lpdwBytesRead);"
+
+[Write]
+Class="Function"
+Prototype="unsigned long Write(void *lpvBuffer, unsigned long dwBuffSize, unsigned long *lpdwBytes);"
+
+[ListDevices]
+Class="Function"
+Prototype="unsigned long ListDevices(void *pArg1, void *pArg2, unsigned long dwFlags);"
+
+[Close]
+Class="Function"
+Prototype="unsigned long Close();"
+
+[SetTimeouts]
+Class="Function"
+Prototype="unsigned long SetTimeouts(unsigned long dwReadTimeout, unsigned long dwWriteTimeout);"
+
+[SetBitmode]
+Class="Function"
+Prototype="unsigned long SetBitmode(unsigned char dwucMask, unsigned char dwucEnable);"
+
+[SetUSBPara]
+Class="Function"
+Prototype="unsigned long SetUSBPara(unsigned long dinTransferSize, unsigned long doutTransferSize);"
+
+[FT232_GetQueueStatus]
+Class="Function"
+Prototype="unsigned long FT232_GetQueueStatus();"
+
+[display_date]
+Class="Function"
+Prototype="void display_date();"
+
+[display_time]
+Class="Function"
+Prototype="void display_time();"
+
+[display_date2]
+Class="Function"
+Prototype="void display_date2();"
+
+[display_time2]
+Class="Function"
+Prototype="void display_time2();"
+
+[config_usb]
+Class="Function"
+Prototype="void config_usb(int usbmode);"
+
+[yc]
+Class="Function"
+Prototype="double yc(unsigned short temp);"
+
+[GETCOMNUM]
+Class="Function"
+Prototype="int GETCOMNUM(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[GETPWCOMNUM]
+Class="Function"
+Prototype="int GETPWCOMNUM(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[autodetectCOM]
+Class="Function"
+Prototype="int autodetectCOM(char *devicename, char *devicefb, int Baud, int parity, int stopbits);"
+
+[display_fee]
+Class="Function"
+Prototype="int display_fee(unsigned char *at);"
+
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[asyn_timerctrl]
+Class="Function"
+Prototype="int asyn_timerctrl(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[asynCB]
+Class="Function"
+Prototype="int asynCB(int reserved, int timerId, int event, void *callbackData, int eventData1, int eventData2);"
+
+[wr_fpbox1]
+Class="Function"
+Prototype="void wr_fpbox1();"
+
+[clr_box]
+Class="Function"
+Prototype="int clr_box(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QuitSoft]
+Class="Function"
+Prototype="int QuitSoft(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[MutiSelCmdFile]
+Class="Function"
+Prototype="int MutiSelCmdFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[MutiSendCmdFile]
+Class="Function"
+Prototype="int MutiSendCmdFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[mutisend]
+Class="Function"
+Prototype="void mutisend();"
+
+[ShutDown]
+Class="Function"
+Prototype="int ShutDown(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SD]
+Class="Function"
+Prototype="void SD();"
+
+[ERROR_CMD1]
+Class="Function"
+Prototype="int ERROR_CMD1(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ERROR1]
+Class="Function"
+Prototype="void ERROR1();"
+
+[ERROR_CMD2]
+Class="Function"
+Prototype="int ERROR_CMD2(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ERROR2]
+Class="Function"
+Prototype="void ERROR2();"
+
+[TimeCode_Set]
+Class="Function"
+Prototype="int TimeCode_Set(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[TimeCode]
+Class="Function"
+Prototype="void TimeCode();"
+
+[Hk_Request]
+Class="Function"
+Prototype="int Hk_Request(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Hk]
+Class="Function"
+Prototype="void Hk();"
+
+[pf_en]
+Class="Function"
+Prototype="int pf_en(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Pf]
+Class="Function"
+Prototype="void Pf();"
+
+[OBSERVE]
+Class="Function"
+Prototype="int OBSERVE(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[observemode]
+Class="Function"
+Prototype="void observemode();"
+
+[ObserCB]
+Class="Function"
+Prototype="int ObserCB(int reserved, int timerId, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CONFIGURE]
+Class="Function"
+Prototype="int CONFIGURE(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[configmode]
+Class="Function"
+Prototype="void configmode();"
+
+[SCICB]
+Class="Function"
+Prototype="int SCICB(int reserved, int timerId, int event, void *callbackData, int eventData1, int eventData2);"
+
+[clr_neutron]
+Class="Function"
+Prototype="int clr_neutron(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[clr_neu]
+Class="Function"
+Prototype="void clr_neu();"
+
+[clr_gamma]
+Class="Function"
+Prototype="int clr_gamma(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[clr_gm]
+Class="Function"
+Prototype="void clr_gm();"
+
+[RESET]
+Class="Function"
+Prototype="int RESET(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[GTRESET]
+Class="Function"
+Prototype="void GTRESET();"
+
+[SETCOM_PULS]
+Class="Function"
+Prototype="int SETCOM_PULS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SETCOM_MINUS]
+Class="Function"
+Prototype="int SETCOM_MINUS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[READ_CONFIG]
+Class="Function"
+Prototype="int READ_CONFIG(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[TAP_CONFIG]
+Class="Function"
+Prototype="int TAP_CONFIG(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SETOBS_PULS]
+Class="Function"
+Prototype="int SETOBS_PULS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SETOBS_MINUS]
+Class="Function"
+Prototype="int SETOBS_MINUS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SETSAVE_PULS]
+Class="Function"
+Prototype="int SETSAVE_PULS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SETSAVE_MINUS]
+Class="Function"
+Prototype="int SETSAVE_MINUS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[AUTOMODE]
+Class="Function"
+Prototype="int AUTOMODE(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CLEAR]
+Class="Function"
+Prototype="int CLEAR(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[UART_CONFIG]
+Class="Function"
+Prototype="int UART_CONFIG(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[UARTCONFIG]
+Class="Function"
+Prototype="void UARTCONFIG();"
+
+[SETPOWERCOM_PULS]
+Class="Function"
+Prototype="int SETPOWERCOM_PULS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SETPOWERCOM_MINUS]
+Class="Function"
+Prototype="int SETPOWERCOM_MINUS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Powerctrl]
+Class="Function"
+Prototype="int Powerctrl(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
