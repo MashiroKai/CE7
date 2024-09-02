@@ -1,0 +1,69 @@
+module Uart_config(
+    input       clk,
+    input       rst_n,
+    input       wen,
+    input       [7:0]din,
+    output      reg  parity,
+    output      reg  [1:0]stopbit
+);
+reg [39:0]  shift;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        shift <= 40'b0;
+    end
+    else begin
+        if (wen) begin
+            shift <= {shift [31:0],din};
+        end
+        else begin
+            shift <= shift;
+        end
+    end
+end
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        parity <= 1'b0;//odd
+        stopbit <= 2'b11;//2 stop bit(s)
+    end
+    else begin
+        case (shift)
+        {8'hEE,8'hDD,8'hCC,8'h00,8'h1}    :begin
+            parity <= 1'b0;//odd
+            stopbit <= 2'b11;//2 stop bit(s)
+        end
+        {8'hEE,8'hDD,8'hCC,8'h00,8'h2}    :begin
+            parity <= 1'b0;
+            stopbit <= 2'b10;
+        end
+        {8'hEE,8'hDD,8'hCC,8'h00,8'h3}    :begin
+            parity <= 1'b0;
+            stopbit <= 2'b01;
+        end
+        {8'hEE,8'hDD,8'hCC,8'h00,8'h4}    :begin
+            parity <= 1'b0;
+            stopbit <= 2'b00;
+        end 
+        {8'hEE,8'hDD,8'hCC,8'h01,8'h1}    :begin
+            parity <= 1'b1;
+            stopbit <= 2'b11;
+        end
+        {8'hEE,8'hDD,8'hCC,8'h01,8'h2}    :begin
+            parity <= 1'b1;
+            stopbit <= 2'b10;
+        end
+        {8'hEE,8'hDD,8'hCC,8'h01,8'h3}    :begin
+            parity <= 1'b1;
+            stopbit <= 2'b01;
+        end
+        {8'hEE,8'hDD,8'hCC,8'h01,8'h4}    :begin
+            parity <= 1'b1;
+            stopbit <= 2'b00;
+        end 
+        default:begin
+            parity <= 1'b0;
+            stopbit <= 2'b11;
+        end
+        endcase
+    end
+end
+endmodule

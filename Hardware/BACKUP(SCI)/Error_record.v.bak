@@ -1,0 +1,111 @@
+/*
+Error_record E1(
+    .clk(clk),
+    .rst_n(rst_n),
+    .HCE(HCE),
+    .PIE(PIE),
+    .ITE(ITE),
+    .CSE(CSE),
+    .LCE(LCE),
+    .BIE(BIE),
+    .IIE(IIE),
+    .RIE(RIE),
+    .ECE(ECE),
+    .HCE_SUM(HCE_SUM),
+    .PIE_SUM(PIE_SUM),
+    .ITE_SUM(ITE_SUM),
+    .CSE_SUM(CSE_SUM),
+    .LCE_SUM(LCE_SUM),
+    .BIE_SUM(BIE_SUM),
+    .IIE_SUM(IIE_SUM),
+    .RIE_SUM(RIE_SUM),
+    .ECE_SUM(ECE_SUM)
+);
+wire [7:0]HCE_SUM,PIE_SUM,ITE_SUM,CSE_SUM,LCE_SUM,BIE_SUM,IIE_SUM,RIE_SUM,ECE_SUM;
+*/
+module Error_record(
+    input   clk ,
+    input   rst_n,
+    input   HCE,PIE,ITE,CSE,LCE,BIE,IIE,RIE,ECE,
+    output  reg [7:0]HCE_SUM,PIE_SUM,ITE_SUM,CSE_SUM,LCE_SUM,BIE_SUM,IIE_SUM,RIE_SUM,ECE_SUM
+);
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        HCE_SUM <= 8'b0;
+        PIE_SUM <= 8'b0;
+        ITE_SUM <= 8'b0;
+        CSE_SUM <= 8'b0;
+        LCE_SUM <= 8'b0;
+        BIE_SUM <= 8'b0;
+        IIE_SUM <= 8'b0;
+        RIE_SUM <= 8'b0;
+        ECE_SUM <= 8'b0;
+    end
+    else begin
+        if (HCE_SUM == 8'd255) begin
+            HCE_SUM <= 8'b0;
+        end
+        else if (HCE) begin
+            HCE_SUM <= HCE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+        if (PIE_SUM == 8'd255) begin
+            PIE_SUM <= 8'b0;
+        end
+        else if (PIE) begin
+            PIE_SUM <= PIE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+        if (ITE_SUM == 8'd255) begin
+            ITE_SUM <= 8'b0;
+        end
+        else if (ITE) begin
+            ITE_SUM <= ITE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+        if (CSE_SUM == 8'd255) begin
+            CSE_SUM <= 8'b0;
+        end
+        else if (CSE) begin
+            CSE_SUM <= CSE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+        if (LCE_SUM == 8'd255) begin
+            LCE_SUM <= 8'b0;
+        end
+        else if (LCE) begin
+            LCE_SUM <= LCE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+        if (BIE_SUM == 8'd255) begin
+            BIE_SUM <= 8'b0;
+        end
+        else if (BIE) begin
+            BIE_SUM <= BIE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+        if (IIE_SUM == 8'd255) begin
+            IIE_SUM <= 8'b0;
+        end
+        else if (IIE) begin
+            IIE_SUM <= IIE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+        if (RIE_SUM == 8'd255) begin
+            RIE_SUM <= 8'b0;
+        end
+        else if (RIE) begin
+            RIE_SUM <= RIE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+        if (ECE_SUM == 8'd255) begin
+            ECE_SUM <= 8'b0;
+        end
+        else if (ECE) begin
+            ECE_SUM <= ECE_SUM + 1'b1;
+        end
+////////////////////////////////////////////
+    end
+end
+//reg HCE,PIE,ITE,CSE,LCE,BIE,IIE,RIE,ECE;
+endmodule

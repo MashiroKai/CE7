@@ -1,0 +1,32 @@
+module mux1to5(
+        input      [4:0]cmd
+        ,input      wen
+        ,input      [7:0]din
+        ,output     valid_tc
+        ,output     [7:0]dout_tc
+        ,output     valid_hk
+        ,output     [7:0]dout_hk
+        ,output     valid_sd
+        ,output     [7:0]dout_sd
+        ,output     valid_di
+        ,output     [7:0]dout_di
+        ,output     valid_pf
+        ,output     [7:0]dout_pf
+);
+localparam ST0 = 5'b00001;
+localparam ST1 = 5'b00010;
+localparam ST2 = 5'b00100;
+localparam ST3 = 5'b01000;
+localparam ST4 = 5'b10000;
+assign  valid_tc = (cmd == ST0) ? wen:1'b0;
+assign  valid_hk = (cmd == ST1) ? wen:1'b0;
+assign  valid_sd = (cmd == ST2) ? wen:1'b0;
+assign  valid_di = (cmd == ST3) ? wen:1'b0;
+assign  valid_pf = (cmd == ST4) ? wen:1'b0;
+
+assign  dout_tc = (cmd == ST0) ? din:8'b0;
+assign  dout_hk = (cmd == ST1) ? din:8'b0;
+assign  dout_sd = (cmd == ST2) ? din:8'b0;
+assign  dout_di = (cmd == ST3) ? din:8'b0;
+assign  dout_pf = (cmd == ST4) ? din:8'b0;
+endmodule

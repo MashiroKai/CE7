@@ -1,0 +1,60 @@
+module reply (
+        input   clk
+        ,input      rst_n
+        ,input      valid
+        ,input      [7:0]din
+        ,output     reg[2:0]st //correct , error , st
+);
+reg [31:0]shift;
+always @(posedge clk or negedge rst_n) begin
+        if (rst_n) begin
+            shift <= 32'b0;
+        end
+        else begin
+            if (valid) begin
+                shift <= {shift[23:0],din};
+            end
+            else begin
+                shift <= shift;
+            end
+        end
+end
+reg [2:0]temp;
+always @(posedge clk or negedge rst_n) begin
+    if (rst_n) begin
+        temp <= 3'b000;
+    end
+    else begin
+        case (shift)
+        {8'hEB,8'h90,8'h04,8'hFF}    : begin
+            temp <= 3'b010;
+        end
+        {8'hEB,8'h90,8'h04,8'hF0}   : begin
+            temp <= 3'b100;
+        end
+        {8'hEB,8'h90,8'h00,8'h76}   :begin
+            temp <= 3'b001;
+        end
+            default: temp <= 3'b000;
+        endcase
+    end
+end
+//pulsed
+reg [2:0]st_r;
+always @(posedge clk or negedge rst_n) begin
+    if (rst_n) begin
+        st_r <= 3'b000;
+    end
+    else begin
+        st_r <= temp;
+    end
+end
+always @(posedge clk or negedge rst_n) begin
+    if (rst_n) begin
+        st <= 3'b000;
+    end
+    else begin
+        st <= temp&(~st_r);
+    end
+end
+endmodule

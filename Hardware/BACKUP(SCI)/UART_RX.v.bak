@@ -1,0 +1,122 @@
+/*
+Uart_Rx R1
+(
+	.clk(),
+	.rst_n(),
+	.bps_en(),
+	.bps_clk(),
+	.rs422_rx(),
+	.rx_data(),
+	.valid(),
+	.check(),
+	.stop()
+);
+*/
+module Uart_Rx
+(
+input					clk,			//系统时钟
+input					rst_n,		//系统复位，低有效
+ 
+output	reg				bps_en,			//接收时钟使能
+input					bps_clk,		//接收时钟输入
+ 
+input					rs422_rx,		//UART接收输入
+output	reg		[7:0]	rx_data,		//接收到的数据
+
+output 	reg				valid,			//data valid pulse
+output  reg             check,			//check bit error
+output  reg 			stop			//stop bit error
+);	
+ 
+reg	rs422_rx0,rs422_rx1,rs422_rx2;	
+//多级延时锁存去除亚稳态
+always @ (posedge clk or negedge rst_n) begin
+	if(!rst_n) begin
+		rs422_rx0 <= 1'b0;
+		rs422_rx1 <= 1'b0;
+		rs422_rx2 <= 1'b0;
+	end else begin
+		rs422_rx0 <= rs422_rx;
+		rs422_rx1 <= rs422_rx0;
+		rs422_rx2 <= rs422_rx1;
+	end
+end
+parameter ST01 = 4'b0001;
+parameter ST02 = 4'b0010;
+parameter ST03 = 4'b0100;
+parameter ST04 = 4'b1000;
+//检测UART接收输入信号的下降沿
+wire	neg_rs422_rx = rs422_rx2 & rs422_rx1 & (~rs422_rx0) & (~rs422_rx);
+reg [7:0] rx_data_r;
+reg verify;	
+reg [3:0]num;
+reg [1:0]stc;
+reg [3:0]STATE;
+always @(posedge clk or negedge rst_n ) begin
+	if (!rst_n) begin
+		STATE <= ST01;
+		bps_en <= 1'b0;
+		valid  <= 1'b0;
+		num    <= 4'b0;
+	end
+	else begin
+		case (STATE)
+		ST01	:begin
+			if (neg_rs422_rx && (!bps_en)) begin
+				STATE <= ST02;
+				bps_en <= 1'b1;
+				valid  <= 1'b0;
+				num    <= 4'b0;
+			end
+		end
+		ST02	:begin
+			if (num == 4'd10) begin
+			STATE  <= ST03;
+			bps_en <= 1'b1;
+			valid  <= 1'b0;
+			end
+			else begin
+			if (bps_clk) begin
+				num <= num + 1'b1;
+				rx_data_r[num-1] <= rs422_rx;
+			end
+			end
+		end
+		ST03	:begin
+			verify <= ~(^rx_data_r) ;//odd
+			rx_data <= rx_data_r;
+			if (bps_clk) begin
+				num <= num + 1'b1;
+			end
+			if (num == 4'd11) begin
+				if (verify == rs422_rx) begin
+					check <= 1'b0;
+				end
+				else begin
+					check <= 1'b1;
+				end
+				STATE <= ST04;
+			end
+		end
+		ST04	:begin
+			if (bps_clk) begin
+				num <= num + 1'b1;
+				stc[num-11] <= rs422_rx;
+			end
+			if(num == 4'd13)begin
+				if (stc == 2'b11) begin
+					stop <= 1'b0;
+				end
+				else begin
+					stop <= 1'b1;
+				end
+				STATE <= ST01;
+				num   <= 4'b0;
+				bps_en <= 1'b0;
+				valid  <= 1'b1;
+			end
+		end
+		endcase
+	end
+end
+endmodule

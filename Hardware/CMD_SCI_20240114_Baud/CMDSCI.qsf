@@ -1,0 +1,139 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# Date created = 15:54:52  January 23, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		CMDSCI_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CEFA9F23I7
+set_global_assignment -name TOP_LEVEL_ENTITY CMDSCI
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:54:52  JANUARY 23, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_J7 -to D[0]
+set_location_assignment PIN_K7 -to D[1]
+set_location_assignment PIN_L7 -to D[2]
+set_location_assignment PIN_M8 -to D[3]
+set_location_assignment PIN_M7 -to D[4]
+set_location_assignment PIN_M6 -to D[5]
+set_location_assignment PIN_N6 -to D[6]
+set_location_assignment PIN_P6 -to D[7]
+set_location_assignment PIN_C6 -to TXE_N
+set_location_assignment PIN_F7 -to OE_N
+set_location_assignment PIN_D6 -to RD_N
+set_location_assignment PIN_E7 -to SIWU_N
+set_location_assignment PIN_D7 -to WR_N
+set_location_assignment PIN_B5 -to LVDS
+set_location_assignment PIN_N9 -to CLK
+set_location_assignment PIN_V15 -to CLKOUT
+set_location_assignment PIN_A5 -to S_RX
+set_location_assignment PIN_B6 -to S_TX
+set_location_assignment PIN_B7 -to TX_EN
+set_location_assignment PIN_C9 -to M_TX
+set_location_assignment PIN_D9 -to M_RX
+set_location_assignment PIN_R22 -to MONITOR_RS422
+set_location_assignment PIN_N20 -to MONITOR_TX_EN
+set_location_assignment PIN_W19 -to MONITOR_LVDS
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X1"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_global_assignment -name SDC_FILE CMDSCI.out.sdc
+set_global_assignment -name VERILOG_FILE RS422_20240114/UART/UART_TX.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/UART/UART_TB.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/UART/UART_RX.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/UART/UART.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/UART/Baud_tx.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/UART/Baud_rx.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/Uart_rst_n.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/timingctrl.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/sttxctrl.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/reply.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/pulsed.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/mux5to1.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/mux1to5.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/fifo.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/counter_32b.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/counter.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/cmdtype.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/cmdtxctrl.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/cmdrxctrl.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/cmdlength.v
+set_global_assignment -name VERILOG_FILE RS422_20240114/cmdfifo.v
+set_global_assignment -name VERILOG_FILE SCI/valid_data.v
+set_global_assignment -name VERILOG_FILE SCI/upload.v
+set_global_assignment -name VERILOG_FILE SCI/rx_stop.v
+set_global_assignment -name VERILOG_FILE SCI/decoder.v
+set_global_assignment -name VERILOG_FILE ASYNC/FIFO2Usb_Asyn.v
+set_global_assignment -name TCL_SCRIPT_FILE ../CMD_SCI/cmdst.tcl
+set_global_assignment -name QIP_FILE PLL12.qip
+set_global_assignment -name SIP_FILE PLL12.sip
+set_global_assignment -name BDF_FILE CMDSCI.bdf
+set_global_assignment -name VERILOG_FILE sttype.v
+set_global_assignment -name VERILOG_FILE strxctrl.v
+set_global_assignment -name VERILOG_FILE or5.v
+set_global_assignment -name VERILOG_FILE fifoarray.v
+set_global_assignment -name QIP_FILE PLL80_30.qip
+set_global_assignment -name SIP_FILE PLL80_30.sip
+set_global_assignment -name QIP_FILE CDC.qip
+set_global_assignment -name VERILOG_FILE cmdstatus.v
+set_global_assignment -name VERILOG_FILE pulsed_reg.v
+set_global_assignment -name VERILOG_FILE Uart_config.v
+set_global_assignment -name VERILOG_FILE sync1.v
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name VERILOG_FILE output_files/CMDSCI.v
+set_global_assignment -name VERILOG_FILE Send_interval.v
+set_global_assignment -name VERILOG_FILE sync.v
+set_global_assignment -name VERILOG_FILE Baud_tx_slave.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

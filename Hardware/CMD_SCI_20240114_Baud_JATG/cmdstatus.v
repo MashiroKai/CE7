@@ -1,0 +1,274 @@
+/*
+cmdstatus c1(
+    .clk(clk)
+    ,.rst_n(rst_n)
+    ,.wen(wen)
+    ,.din(din)//8bits
+    ,.valid(valid)
+    ,.dout(dout)//8bits
+    ,.cmdend(cmdend)
+);
+
+*/
+
+
+/////overtime protect 
+/////perfectly generate cmdend 
+module cmdstatus(
+    input       clk
+    ,input      rst_n
+    ,input      wen
+    ,input      [7:0]din
+    ,output     reg valid
+    ,output     reg [7:0]dout
+    ,output     reg cmdend
+);
+
+/////FIFO OUT
+reg ENABLE;
+always @(*) begin
+    if (!rst_n) begin
+        valid = 1'b0;
+        dout  = 8'h00;
+    end
+    else begin
+        if (ENABLE) begin
+            valid = fifo_valid;
+            dout  = fifo_dout;
+        end
+        else begin
+            valid = 1'b0;
+            dout  = 8'h00;
+        end
+    end
+end
+/////ENABLE
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        ENABLE <= 1'b0;
+    end
+    else begin
+        if (STATE == ST3 ||STATE == ST6||STATE == ST4) begin
+            ENABLE <= 1'b1;
+        end
+        else begin
+            ENABLE <= 1'b0;
+        end
+    end
+end
+/////PARAMETER
+localparam  PKGHEAD = 16'hEB90;
+localparam  HEAD = 8'hEB;
+localparam  FLAG = 8'h90;
+/////STATE MACHINE
+localparam ST0 = 8'b00000001;
+localparam ST1 = 8'b00000010;
+localparam ST2 = 8'b00000100;
+localparam ST3 = 8'b00001000;
+localparam ST4 = 8'b00010000;
+localparam ST5 = 8'b00100000;
+localparam ST6 = 8'b01000000;
+localparam ST7 = 8'b10000000;
+reg [7:0]STATE;
+reg load;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        STATE <= ST0;
+        load <= 1'b0;
+    end
+    else begin
+        case (STATE)
+        ST0    :begin
+            if (wen&&din==HEAD) begin
+                STATE <= ST1;
+            end
+            else begin
+                STATE <= STATE;
+            end
+        end
+        ST1     :begin
+            if (wen&&din==HEAD) begin
+                load <= 1'b1;
+            end
+            else begin
+                load <= 1'b0;
+            end
+            if (wen&&din==FLAG) begin
+                STATE <= ST3;
+            end
+            else begin
+                if (wen&&din==HEAD) begin
+                    STATE <= STATE;
+                end
+                else begin
+                    if (wen||overtime) begin
+                        STATE <= ST5;
+                    end
+                    else begin
+                        STATE <= STATE;
+                    end
+                end
+                end
+        end
+        ST2     :begin/////generate cmdend signal
+            STATE <= ST3;
+        end
+        ST3     :begin/////generate load fifo signal
+            if (overtime) begin
+                STATE   <= ST4;
+                load    <= 1'b0;
+            end
+            else begin
+                if (wen&&din ==HEAD) begin
+                    STATE <= ST6;
+                    load <= 1'b0;
+                end
+                else begin
+                    load <= 1'b1;
+                    STATE <= STATE;
+                end
+            end
+        end
+        ST4     :begin/////generate cmdend signal
+            STATE <= ST0;
+        end 
+        ST5     :begin/////generate clear signal
+            STATE <= ST0;
+        end
+        ST6     :begin
+            if (wen&&din==HEAD||overtime) begin
+                load <= 1'b1;
+            end
+            else begin
+                load <= 1'b0;
+            end
+            if (wen&&din==FLAG) begin
+                STATE <= ST2;
+            end
+            else begin
+                if (wen&&din==HEAD) begin
+                    STATE <= STATE;
+                end
+                else begin
+                    if (wen) begin
+                        STATE <= ST3;
+                    end
+                    else begin
+                        if (ovetime_r) begin
+                            STATE <= ST4;
+                        end
+                        else begin
+                            STATE <= STATE;
+                        end
+                    end
+                end
+            end
+        end
+            default: STATE <= ST0;
+        endcase
+    end
+end
+/////cmdend
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        cmdend <= 1'b0;
+    end
+    else begin
+        if (STATE == ST4||STATE == ST2) begin
+            cmdend <= 1'b1;
+        end
+        else begin
+            cmdend <= 1'b0;
+        end
+    end
+end
+/////FIFO
+wire fifo_valid;
+wire [7:0]fifo_dout;
+fifo #(
+    .WIDTH(8),
+    .PTRWIDTH(8)
+)
+f1(
+    .clk(clk)
+    ,.rst_n(clear)
+    ,.valid(wen_s)
+    ,.din(din_s)
+    ,.load(load)
+    ,.dout(fifo_dout)
+    ,.fifo_valid(fifo_valid)
+    ,.usedw(usedw)
+);
+wire [8:0]usedw;
+wire wen_s;
+wire [7:0]din_s;
+
+/////CLEAR
+reg clear;
+always @(*) begin
+        if (STATE == ST5||STATE == ST0) begin
+            clear = 1'b0;
+        end
+        else begin
+            clear = 1'b1;
+        end
+end
+/////OVERTIME
+reg asyn,en;
+wire overtime_r;
+counter #(
+    .RST(12000),//1ms
+    .START(0)
+)
+c1(
+    .clk(clk)
+    ,.rst_n(rst_n)
+    ,.asyn(wen)
+    ,.en(en)
+    ,.pulse(overtime)//generate rx_done signal
+);
+sync#(
+    .WIDTH(1)
+    ,.CYCLE(2)
+) 
+s1(
+    .clk(clk)
+    ,.rst_n(rst_n)
+    ,.d(overtime)
+    ,.q(ovetime_r)
+);
+sync#(
+    .WIDTH(1)
+    ,.CYCLE(2)
+) 
+s2(
+    .clk(clk)
+    ,.rst_n(rst_n)
+    ,.d(wen)//width
+    ,.q(wen_s)
+);
+sync#(
+    .WIDTH(8)
+    ,.CYCLE(2)
+) 
+s3(
+    .clk(clk)
+    ,.rst_n(rst_n)
+    ,.d(din)//width
+    ,.q(din_s)
+);
+always @(*) begin
+    if (!rst_n) begin
+        en = 1'b0;
+    end
+    else begin
+        if (STATE == ST3||STATE == ST6) begin
+            en = 1'b1;
+        end
+        else begin
+            en = 1'b0;
+        end
+    end
+end
+/////
+endmodule

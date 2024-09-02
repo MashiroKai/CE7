@@ -1,0 +1,88 @@
+[LoadDLL]
+Class="Function"
+Prototype="int LoadDLL();"
+
+[FreeDLL]
+Class="Function"
+Prototype="int FreeDLL();"
+
+[open]
+Class="Function"
+Prototype="unsigned long open(int DeviceID);"
+
+[Read]
+Class="Function"
+Prototype="unsigned long Read(void *lpvBuffer, unsigned long dwBuffSize, unsigned long *lpdwBytesRead);"
+
+[Write]
+Class="Function"
+Prototype="unsigned long Write(void *lpvBuffer, unsigned long dwBuffSize, unsigned long *lpdwBytes);"
+
+[ListDevices]
+Class="Function"
+Prototype="unsigned long ListDevices(void *pArg1, void *pArg2, unsigned long dwFlags);"
+
+[Close]
+Class="Function"
+Prototype="unsigned long Close();"
+
+[SetTimeouts]
+Class="Function"
+Prototype="unsigned long SetTimeouts(unsigned long dwReadTimeout, unsigned long dwWriteTimeout);"
+
+[SetBitmode]
+Class="Function"
+Prototype="unsigned long SetBitmode(unsigned char dwucMask, unsigned char dwucEnable);"
+
+[SetUSBPara]
+Class="Function"
+Prototype="unsigned long SetUSBPara(unsigned long dinTransferSize, unsigned long doutTransferSize);"
+
+[FT232_GetQueueStatus]
+Class="Function"
+Prototype="unsigned long FT232_GetQueueStatus();"
+
+[display_date]
+Class="Function"
+Prototype="void display_date();"
+
+[display_time]
+Class="Function"
+Prototype="void display_time();"
+
+[display_date2]
+Class="Function"
+Prototype="void display_date2();"
+
+[display_time2]
+Class="Function"
+Prototype="void display_time2();"
+
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[config_usb]
+Class="Function"
+Prototype="int config_usb(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[asyn_timerctrl]
+Class="Function"
+Prototype="int asyn_timerctrl(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[asynCB]
+Class="Function"
+Prototype="int asynCB(int reserved, int timerId, int event, void *callbackData, int eventData1, int eventData2);"
+
+[clr_box]
+Class="Function"
+Prototype="int clr_box(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QuitSoft]
+Class="Function"
+Prototype="int QuitSoft(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[check]
+Class="Function"
+Prototype="int check(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

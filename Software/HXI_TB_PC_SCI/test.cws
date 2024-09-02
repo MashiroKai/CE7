@@ -1,0 +1,204 @@
+[Workspace Header]
+Version = 1700
+Pathname = "/e/kk/HXI_TB_PC_SCI/test.cws"
+CVI Dir = "/c/program files (x86)/national instruments/cvi2017"
+CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2017"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "test.prj"
+Drag Bar Left = 279
+Window Top = 31
+Window Left = 26
+Window Bottom = 533
+Window Right = 816
+Maximized = True
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win At Start = True
+Bring Up Err Win For Errors = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 6
+Window Confinement Region Enabled = True
+MainColumnWidth = 262
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+
+[Project Header 0001]
+Version = 1700
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Debug"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/e/kk/HXI_TB_PC_SCI/EPH5275_PNP.c"
+File Type = "CSource"
+Disk Date = 3777071914
+In Projects = "1,"
+Window Top = 45
+Window Left = 10
+Window Z-Order = 2
+Source Window State = "1,160,160,160,64,77,64,0,0,117,0,0,0,0,0,33,136,0,160,77,531,855,1,0,"
+
+[File 0002]
+Path = "/e/kk/HXI_TB_PC_SCI/EPH5275_PNP.uir"
+File Type = "User Interface Resource"
+Disk Date = 3794527014
+In Projects = "1,"
+Window Top = 62
+Window Left = 26
+Window Height = 323
+Window Width = 517
+Window Z-Order = 1
+
+[File 0003]
+Path = "/e/kk/HXI_TB_PC_SCI/EPH5275_PNP.h"
+File Type = "Include"
+Disk Date = 3682375432
+In Projects = "1,"
+Window Top = 110
+Window Left = 49
+Window Z-Order = 6
+Source Window State = "1,0,0,0,0,0,0,0,0,81,0,0,0,0,0,28,0,0,0,18,453,604,1,0,"
+
+[File 0004]
+Path = "/e/kk/HXI_TB_PC_SCI/ftd2xx_wp.h"
+File Type = "Include"
+Disk Date = 3777069896
+In Projects = "1,"
+Window Top = 218
+Window Left = 106
+Window Z-Order = 5
+Source Window State = "1,7,7,7,8,27,27,0,0,105,0,0,0,0,0,37,0,0,7,32,583,774,1,9,"
+
+[File 0005]
+Path = "/e/kk/HXI_TB_PC_SCI/ftd2xx_wp.c"
+File Type = "CSource"
+Disk Date = 3575201452
+In Projects = ""
+Window Top = 33
+Window Left = 10
+Window Z-Order = 4
+Source Window State = "1,7,7,7,8,17,17,0,0,139,0,0,0,0,0,33,0,0,7,37,531,1015,1,9,"
+
+[File 0006]
+Path = "/e/kk/HXI_TB_PC_SCI/ftd2xx.h"
+File Type = "Include"
+Disk Date = 3575250918
+In Projects = ""
+Window Top = 64
+Window Left = 26
+Window Z-Order = 3
+Source Window State = "1,214,214,214,8,28,28,0,0,139,0,0,0,0,0,33,937,0,962,25,531,1015,1,0,"
+
+[Tab Order]
+Tab 0001 = "/e/kk/HXI_TB_PC_SCI/EPH5275_PNP.uir"
+Tab 0002 = "/e/kk/HXI_TB_PC_SCI/EPH5275_PNP.h"
+Tab 0003 = "/e/kk/HXI_TB_PC_SCI/ftd2xx_wp.h"
+Tab 0004 = "/e/kk/HXI_TB_PC_SCI/ftd2xx_wp.c"
+Tab 0005 = "/e/kk/HXI_TB_PC_SCI/ftd2xx.h"
+Tab 0006 = "/e/kk/HXI_TB_PC_SCI/EPH5275_PNP.c"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Build Dependencies 0001]
+Number of Dependencies = 0
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+

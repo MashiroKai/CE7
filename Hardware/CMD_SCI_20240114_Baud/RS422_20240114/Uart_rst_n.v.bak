@@ -1,0 +1,35 @@
+module Uart_rst_n(
+            input       clk
+            ,input      rst_n
+            ,input      valid
+            ,input      [7:0]din
+            ,output     reg reset_n // must connect to module "pulsed" 
+);
+reg [39:0]shift;
+always @(posedge clk or negedge rst_n) begin
+    if (rst_n) begin
+        shift <= 40'b0;
+    end
+    else begin
+        if (valid) begin
+            shift <= {shift[31:0],din};
+        end
+        else begin
+            shift <= shift;
+        end
+    end
+end
+always @(posedge clk or negedge rst_n) begin
+    if (rst_n) begin
+        reset_n <= 1'b1;
+    end
+    else begin
+        case (shift)
+        {8'hAA,8'hBB,8'hCC,8'hDD,8'hEE,8'hFF}    : begin
+            reset_n <= 1'b0;
+        end
+            default: reset_n <= 1'b1;
+        endcase
+    end
+end
+endmodule

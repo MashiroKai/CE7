@@ -1,0 +1,48 @@
+[display_date]
+Class="Function"
+Prototype="void display_date();"
+
+[display_time]
+Class="Function"
+Prototype="void display_time();"
+
+[display_date2]
+Class="Function"
+Prototype="void display_date2();"
+
+[display_time2]
+Class="Function"
+Prototype="void display_time2();"
+
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[CONFIG_UART_USB]
+Class="Function"
+Prototype="int CONFIG_UART_USB(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QUIT]
+Class="Function"
+Prototype="int QUIT(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[asynCB]
+Class="Function"
+Prototype="int asynCB(int reserved, int timerId, int event, void *callbackData, int eventData1, int eventData2);"
+
+[asynCB1]
+Class="Function"
+Prototype="int asynCB1(int reserved, int timerId, int event, void *callbackData, int eventData1, int eventData2);"
+
+[asynCB2]
+Class="Function"
+Prototype="int asynCB2(int reserved, int timerId, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Writefile]
+Class="Function"
+Prototype="int Writefile(unsigned char *at);"
+
+[CLEAR]
+Class="Function"
+Prototype="int CLEAR(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "S_TX",
+					"strict" : false
+				},
+				{
+					"name" : "RESET_N",
+					"strict" : false
+				},
+				{
+					"name" : "TX_EN",
+					"strict" : false
+				},
+				{
+					"name" : "MONITOR_TX_EN",
+					"strict" : false
+				},
+				{
+					"name" : "RESET_N_",
+					"strict" : false
+				},
+				{
+					"name" : "RD_N",
+					"strict" : false
+				},
+				{
+					"name" : "WR_N",
+					"strict" : false
+				},
+				{
+					"name" : "MONITOR_LVDS",
+					"strict" : false
+				},
+				{
+					"name" : "D[7]",
+					"strict" : false
+				},
+				{
+					"name" : "D[6]",
+					"strict" : false
+				},
+				{
+					"name" : "D[5]",
+					"strict" : false
+				},
+				{
+					"name" : "D[4]",
+					"strict" : false
+				},
+				{
+					"name" : "D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "M_TX",
+					"strict" : false
+				},
+				{
+					"name" : "D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MONITOR_RS422",
+					"strict" : false
+				},
+				{
+					"name" : "LVDS",
+					"strict" : false
+				},
+				{
+					"name" : "S_RX",
+					"strict" : false
+				},
+				{
+					"name" : "RXF_N",
+					"strict" : false
+				},
+				{
+					"name" : "TXE_N",
+					"strict" : false
+				},
+				{
+					"name" : "M_RX",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

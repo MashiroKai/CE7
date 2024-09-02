@@ -1,0 +1,176 @@
+module cmdfifo #(
+    parameter       LENGTH = 256,
+    parameter       DEPTH  = 256,
+    parameter       WIDTH = 8
+)
+(
+        input       clk
+        ,input      rst_n
+        //write interface
+        ,input      wen
+        ,input      [WIDTH-1:0]din
+        ,output     full
+        //read interface
+        ,input      ren
+        ,output     reg valid
+        ,output     reg [WIDTH-1:0]dout
+        ,output     empty
+        // rx and tx indicator
+        ,output     reg rx_done
+        ,output     reg tx_done
+);
+//generate full signal
+assign full = ({wr_ptr_depth[WIDTH],wr_ptr_depth[WIDTH-1:0]} == {!rd_ptr_depth[WIDTH],rd_ptr_depth[WIDTH-1:0]})? 1'b1:1'b0;
+assign empty = (wr_ptr_depth == rd_ptr_depth) ? 1'b1:1'b0;
+//data buffer
+reg [WIDTH-1:0]buffer[LENGTH-1:0][DEPTH-1:0];
+//data buffer
+reg [WIDTH-1:0]wr_ptr_depth_ture,rd_ptr_depth_ture;
+reg [WIDTH:0]wr_ptr_depth,rd_ptr_depth;
+reg [WIDTH-1:0]wr_ptr_length,rd_ptr_length;
+//write buffer control
+reg [WIDTH-1:0]i,j;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+            for (i = 0; i<DEPTH ;i=i+1) begin
+                for (j = 0 ;j<LENGTH ;j=j+1 ) begin
+                    buffer[j][i] = 8'b00000000;
+                end
+            end
+    end
+    else begin
+        if (wen) begin
+            buffer[wr_ptr_length][wr_ptr_depth_ture] <= din;
+        end
+        else begin
+            buffer[wr_ptr_length][wr_ptr_depth_ture] <= buffer[wr_ptr_length][wr_ptr_depth_ture]; 
+        end
+    end
+end
+//read buffer control
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        valid <= 1'b0;
+    end
+    else begin
+        if (ren) begin
+            valid <= 1'b1;
+        end
+        else begin
+            valid <= 1'b0;
+        end
+    end
+end
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        dout <= 8'd0;
+    end
+    else begin
+        if (ren) begin
+            dout <= buffer[rd_ptr_length][rd_ptr_depth_ture];
+        end
+        else begin
+            dout <= dout;
+        end
+    end
+end
+//length write pointer control
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        wr_ptr_length <= 8'd0;
+    end
+    else begin
+        if (wr_ptr_length == LENGTH) begin
+            wr_ptr_length <= 8'd0;
+        end
+        else begin
+            if (wen) begin
+                wr_ptr_length <= wr_ptr_length + 8'd1;
+            end
+            else begin
+                wr_ptr_length <= wr_ptr_length;
+            end
+        end
+    end
+end
+//depth write pointer control
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        wr_ptr_depth_ture <= 8'd0;
+        wr_ptr_depth <= 9'd0;
+    end
+    else begin
+        if (wr_ptr_length == LENGTH) begin
+            wr_ptr_depth_ture <= wr_ptr_depth_ture + 8'd1;
+            wr_ptr_depth <= wr_ptr_depth + 9'd1;
+        end
+        else begin
+            wr_ptr_depth_ture <= wr_ptr_depth_ture;
+            wr_ptr_depth <= wr_ptr_depth;
+        end
+    end
+end
+//length read pointer control
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        rd_ptr_length <= 8'd0;
+    end
+    else begin
+        if (rd_ptr_length == LENGTH) begin
+            rd_ptr_length <= 8'd0;
+        end
+        else begin
+            if (ren) begin
+                rd_ptr_length <= rd_ptr_length + 8'd1;
+            end
+            else begin
+                rd_ptr_length <= rd_ptr_length;
+            end
+        end
+    end
+end
+//depth read pointer control
+always @(negedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        rd_ptr_depth_ture <= 8'd0;
+        rd_ptr_depth <= 9'd0;
+    end
+    else begin
+        if (rd_ptr_length == LENGTH) begin
+           rd_ptr_depth_ture <= rd_ptr_depth_ture + 8'd1;
+           rd_ptr_depth <= rd_ptr_depth + 9'd1; 
+        end
+        else begin
+            rd_ptr_depth_ture <= rd_ptr_depth_ture;
+            rd_ptr_depth <= rd_ptr_depth;
+        end
+    end
+end
+//tx_done
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        tx_done <= 1'b0;
+    end
+    else begin
+        if (rd_ptr_length == LENGTH) begin
+            tx_done <= 1'b1;
+        end
+        else begin
+            tx_done <= 1'b0;
+        end
+    end
+end
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        rx_done <= 1'b0;
+    end
+    else begin
+        if (wr_ptr_length == LENGTH) begin
+            rx_done <= 1'b1;
+        end
+        else begin
+            rx_done <= 1'b0;
+        end
+    end
+end
+endmodule

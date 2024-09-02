@@ -1,0 +1,8 @@
+Info (10281): Verilog HDL Declaration information at decoder.v(64): object "a" differs only in case from object "A" in the same scope File: E:/KY_quartus/CMD_SCI_20240114/SCI/decoder.v Line: 64
+Info (10281): Verilog HDL Declaration information at decoder.v(65): object "b" differs only in case from object "B" in the same scope File: E:/KY_quartus/CMD_SCI_20240114/SCI/decoder.v Line: 65
+Info (10281): Verilog HDL Declaration information at decoder.v(66): object "c" differs only in case from object "C" in the same scope File: E:/KY_quartus/CMD_SCI_20240114/SCI/decoder.v Line: 66
+Info (10281): Verilog HDL Declaration information at decoder.v(67): object "d" differs only in case from object "D" in the same scope File: E:/KY_quartus/CMD_SCI_20240114/SCI/decoder.v Line: 67
+Info (10281): Verilog HDL Declaration information at decoder.v(68): object "e" differs only in case from object "E" in the same scope File: E:/KY_quartus/CMD_SCI_20240114/SCI/decoder.v Line: 68
+Info (10281): Verilog HDL Declaration information at decoder.v(70): object "f" differs only in case from object "F" in the same scope File: E:/KY_quartus/CMD_SCI_20240114/SCI/decoder.v Line: 70
+Info (10281): Verilog HDL Declaration information at decoder.v(71): object "g" differs only in case from object "G" in the same scope File: E:/KY_quartus/CMD_SCI_20240114/SCI/decoder.v Line: 71
+Info (10281): Verilog HDL Declaration information at decoder.v(72): object "h" differs only in case from object "H" in the same scope File: E:/KY_quartus/CMD_SCI_20240114/SCI/decoder.v Line: 72

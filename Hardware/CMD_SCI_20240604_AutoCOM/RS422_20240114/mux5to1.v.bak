@@ -1,0 +1,124 @@
+module mux5to1(
+        input       clk
+        ,input       rst_n
+        ,input       empty_tc
+        ,input      tx_done_tc
+        ,input      empty_hk
+        ,input      tx_done_hk
+        ,input      empty_sd
+        ,input      tx_done_sd
+        ,input      empty_di
+        ,input      tx_done_di
+        ,input      empty_pf
+        ,input      tx_done_pf
+        ,output     reg empty
+        ,output     reg tx_done
+);
+localparam ST0 = 6'b000001;
+localparam ST1 = 6'b000010;
+localparam ST2 = 6'b000100;
+localparam ST3 = 6'b001000;
+localparam ST4 = 6'b010000;
+localparam ST5 = 6'b100000;
+reg [5:0]STATE;
+reg [4:0]status;
+always @(*) begin
+    if (!rst_n) begin
+        empty = 1'b0;
+        tx_done = 1'b0;
+    end
+    else begin
+        case (STATE)
+        ST0    : begin
+                empty = empty_pf;
+                tx_done = tx_done_pf;
+        end
+        ST1    :begin
+                empty = empty_di;
+                tx_done = tx_done_di;
+        end     
+        ST2    :begin
+                empty = empty_sd;
+                tx_done = tx_done_sd;
+        end 
+        ST3    :begin
+                empty = empty_hk;
+                tx_done = tx_done_hk;
+        end 
+        ST4    :begin
+                empty = empty_tc;
+                tx_done = tx_done_tc;
+        end 
+            default:begin
+                empty = 1'b0;
+                tx_done = 1'b0;
+            end
+        endcase
+    end
+end
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        STATE <= ST0;
+    end
+    else begin
+        case (STATE)
+        ST0    :begin
+                if (!status[0]) begin
+                    STATE <= ST1;
+                end
+                else begin
+                    STATE <= ST0;
+                end
+        end
+        ST1    :begin
+                if (!status[0]) begin
+                    STATE <= ST2;
+                end
+                else begin
+                    STATE <= ST1;
+                end
+        end 
+        ST2     :begin
+                if (!status[0]) begin
+                    STATE <= ST3;
+                end
+                else begin
+                    STATE <= ST2;
+                end
+        end
+        ST3     :begin
+                if (!status[0]) begin
+                    STATE <= ST4;
+                end
+                else begin
+                    STATE <= ST3;
+                end
+        end
+        ST4     :begin
+                if (!status[0]) begin
+                    STATE <= ST0;
+                end
+                else begin
+                    STATE <= ST4;
+                end
+        end 
+            default: STATE <= ST0;
+        endcase
+    end
+end
+always @(*) begin
+    if (!rst_n) begin
+        status = 5'b00000;
+    end
+    else begin
+        case (STATE)
+        ST0    : status = {empty_pf,empty_di,empty_sd,empty_hk,empty_tc};
+        ST1    : status = {empty_di,empty_sd,empty_hk,empty_tc,empty_pf};
+        ST2    : status = {empty_sd,empty_hk,empty_tc,empty_pf,empty_di};
+        ST3    : status = {empty_hk,empty_tc,empty_pf,empty_di,empty_sd};
+        ST4    : status = {empty_tc,empty_pf,empty_di,empty_sd,empty_hk};
+            default: status = {empty_pf,empty_di,empty_sd,empty_hk,empty_tc};
+        endcase
+    end
+end
+endmodule

@@ -1,0 +1,1 @@
+-force-include-file "EPH5275_PNP.c";"e:\kk\HXI_TB_PC_SCI\EPH5275_PNP.c" -force-include-file "EPH5275_PNP.h";"e:\kk\HXI_TB_PC_SCI\EPH5275_PNP.h" -force-include-file "ftd2xx_wp.h";"e:\kk\HXI_TB_PC_SCI\ftd2xx_wp.h" 

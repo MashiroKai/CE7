@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Feb 25 21:00:07 2024
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : CMDSCI
+Top-level Entity Name : CMDSCI
+Family : Cyclone V
+Device : 5CEFA9F23I7
+Timing Models : Final
+Logic utilization (in ALMs) : 3,497 / 113,560 ( 3 % )
+Total registers : 5961
+Total pins : 30 / 224 ( 13 % )
+Total virtual pins : 0
+Total block memory bits : 6,957,088 / 12,492,800 ( 56 % )
+Total RAM Blocks : 851 / 1,220 ( 70 % )
+Total DSP Blocks : 0 / 342 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2 / 8 ( 25 % )
+Total DLLs : 0 / 4 ( 0 % )
