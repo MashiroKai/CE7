@@ -1463,9 +1463,9 @@ int CVICALLBACK asynCB (int reserved, int timerId, int event,
 			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%100==8)
 			{
 				if(TIME_FLAG==1) TimeCode();
-				 timecode_sec = 7050;
-				//timecode_sec = timecode_sec + 10;
-				//timecode_milsec = timecode_milsec +100;
+				// timecode_sec = 7050;
+				timecode_sec = timecode_sec + 100;
+			//	timecode_milsec = timecode_milsec +100;
 			}
 			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%10==9)
 			{
