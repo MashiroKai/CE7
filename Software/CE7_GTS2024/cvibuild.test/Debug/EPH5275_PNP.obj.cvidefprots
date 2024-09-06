@@ -274,3 +274,7 @@ Prototype="int SETPOWERCOM_MINUS(int panel, int control, int event, void *callba
 Class="Function"
 Prototype="int Powerctrl(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[hkOnce]
+Class="Function"
+Prototype="int hkOnce(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

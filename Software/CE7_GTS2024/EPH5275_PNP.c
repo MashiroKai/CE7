@@ -186,6 +186,7 @@ int OBSE_FLAG = -1;
 int CONFIC_FLAG = -1;
 int GT_FLAG = -1;
 int UART_FLAG = -1;
+int HK_ONCE = -1;
 int LoadDLL();
 
 typedef FT_STATUS (WINAPI *PtrToOpen)(int, FT_HANDLE *);
@@ -1443,7 +1444,7 @@ int CVICALLBACK asynCB (int reserved, int timerId, int event,
 				SetAsyncTimerAttribute (timerid, ASYNC_ATTR_ENABLED,0);
 			}
 			else  Tcnt++;
-			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%10==4&&HK_FLAG == 1) Hk();
+			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%10==4&&(HK_FLAG == 1||HK_ONCE == 1)) Hk();
 			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%10==5&&PF_FLAG == 1) Pf();
 			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%10==6)
 			{
@@ -1976,6 +1977,7 @@ int CVICALLBACK Hk_Request (int panel, int control, int event,
 }
 void Hk (void)
 {
+    HK_ONCE = -1;
 	unsigned char st[100000]="";
 	unsigned char cmd[9];
 	unsigned int tmp = 0;
@@ -2704,3 +2706,14 @@ int CVICALLBACK Powerctrl (int panel, int control, int event,
 }
 
 
+int CVICALLBACK hkOnce (int panel, int control, int event,
+						void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			HK_ONCE = 1;
+			break;
+	}
+	return 0;
+}

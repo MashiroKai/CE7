@@ -95,6 +95,7 @@
 #define  PANEL_GTVMAX                     80      /* control type: string, callback function: (none) */
 #define  PANEL_FEEVMAX                    81      /* control type: string, callback function: (none) */
 #define  PANEL_FEEIMAX                    82      /* control type: string, callback function: (none) */
+#define  PANEL_hkOnce                     83      /* control type: command, callback function: hkOnce */
 
 
      /* Control Arrays: */
@@ -122,6 +123,7 @@ int  CVICALLBACK ERROR_CMD2(int panel, int control, int event, void *callbackDat
 int  CVICALLBACK GETCOMNUM(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK GETPWCOMNUM(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK Hk_Request(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK hkOnce(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK MutiSelCmdFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK MutiSendCmdFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK OBSERVE(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
