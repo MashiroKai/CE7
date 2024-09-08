@@ -782,7 +782,16 @@ int display_fee(unsigned char* at)
 	}//检测包序列不连续错误并打印在文本框
 	Last_Num = Curr_Num;
 	__int64 TIMECODE =(at[base+0]*1099511627776 + at[base+1]*4294967296 + at[base+2]*16777216 + at[base+3]*65536 + at[base+4]*256 + at[base+5]); //6 bytes系统时间码
-	unsigned short int STATUS = at[base+6]*256 + at[base+7];//2 bytes 上一指令类型 - FEE工作状态
+	unsigned char SYZLLX = at[base+6];//1byte 上一指令类型
+	unsigned char GZZT = at[base+7];
+	unsigned char STATUS[100] = "";//2 bytes 上一指令类型 - FEE工作状态
+	unsigned char tmp6[100] = "";
+	unsigned char tmp7[100] = "";
+	Fmt(tmp6,"%s<%X",SYZLLX);
+	Fmt(tmp7,"%s<%b",GZZT);
+	strcat(STATUS,tmp6);
+	strcat(STATUS,"_");
+	strcat(STATUS,tmp7);		
 	unsigned char COL_PAR = at[base+8];//1 byte 采集配置参数
 	unsigned char RX_NUM = at[base+9];//1 byte 接收指令计数
 	unsigned char ERR_NUM = (at[base+10]>>2)&0x3F;//1 byte 错误指令计数
@@ -823,9 +832,39 @@ int display_fee(unsigned char* at)
 	unsigned char GMCFXZ = at[base+54];//1 byte 伽玛通道使能
 	unsigned char ZZCFSN1 = at[base+55];//1 byte 中子通道使能1
 	unsigned char ZZCFSN2 = at[base+56];//1 byte 中子通道使能2
+	unsigned char CWZT[100] = "";//1 byte UART 错误状态
+	unsigned char tmp8[100] = "";
+	unsigned char tmp9[100] = "";
+	unsigned char PTXXZT = at[base+57]>>6;//平台信息状突 中子锁定信号
 	unsigned char CWTXLX =at[base+57]&0x3F;//错误状态
-	unsigned char GMFHC =at[base+58];//科学数据时间-伽玛符合窗
-
+	Fmt(tmp8,"%s<%b",PTXXZT);
+	Fmt(tmp9,"%s<%X",CWTXLX);
+	strcat(CWZT,tmp8);
+	strcat(CWZT,"_");
+	strcat(CWZT,tmp9); 
+	
+	
+	unsigned char FFHTB[100] ="";//反符合同步 
+	unsigned char tmp10[100] = "";
+	unsigned char tmp11[100] = "";
+	unsigned char KXSJPL = at[base+58]>>6;//平台信息状突 中子锁定信号
+	unsigned char FFHC =at[base+58]&0x3F;//错误状态
+	Fmt(tmp10,"%s<%b",KXSJPL);
+	Fmt(tmp11,"%s<%X",KXSJPL);
+	strcat(FFHTB,tmp10);
+	strcat(FFHTB,"_");
+	strcat(FFHTB,tmp11); 
+	unsigned char ZSLSN[100] ="";//反符合同步 
+	unsigned char tmp12[100] = "";
+	unsigned char tmp13[100] = "";
+	unsigned char DCFSN = at[base+59]>>7;//平台信息状突 中子锁定信号
+	unsigned char GTDZSLSN =((at[base+59]&0x7F)*256 + at[base+60]&0xC0)>>6;//错误状态
+	Fmt(tmp12,"%s<%b",DCFSN);
+	Fmt(tmp13,"%s<%b",GTDZSLSN);
+	strcat(ZSLSN,tmp12);
+	strcat(ZSLSN,"_");
+	strcat(ZSLSN,tmp13); 
+	
 	double Temp_Cebr3 = yc(CeBr3);
 	double Temp_PMT1 = yc(PMT1);
 	double Temp_PMT2 = yc(PMT2);
@@ -878,10 +917,10 @@ int display_fee(unsigned char* at)
 	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (2, 12), ATTR_CTRL_VAL, GMCFXZ);//伽马通道使能
 	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (4, 12), ATTR_CTRL_VAL, ZZCFSN1);//中子通道使能1
 	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (6, 12), ATTR_CTRL_VAL, ZZCFSN2);//中子通道使能2
-	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (2, 13), ATTR_CTRL_VAL, CWTXLX);//错误状态
-	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (4, 13), ATTR_CTRL_VAL, GMFHC);//科学数据时间-伽马符合窗
-	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (6, 13), ATTR_CTRL_VAL, YC_NUM);//分组标志-包序列计数
-
+	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (2, 13), ATTR_CTRL_VAL, CWZT);//错误状态
+	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (4, 13), ATTR_CTRL_VAL, FFHTB);//科学数据时间-伽马符合窗
+	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (6, 13), ATTR_CTRL_VAL, ZSLSN);//分组标志-包序列计数
+	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (2, 14), ATTR_CTRL_VAL, YC_NUM);//分组标志-包序列计数   
 	//draw current plot
 	int limited_array=30;
 	int cnt_va0=0;
@@ -956,7 +995,7 @@ int display_fee(unsigned char* at)
 	fprintf(fp_blackbox1,"%s,",stime);
 	fprintf(fp_blackbox1,"%s,",fee_current);
 	fprintf(fp_blackbox1,"%lld,",TIMECODE);
-	fprintf(fp_blackbox1,"%X,",STATUS);
+	fprintf(fp_blackbox1,"%s,",STATUS);
 	fprintf(fp_blackbox1,"%X,",COL_PAR);
 	fprintf(fp_blackbox1,"%d,",RX_NUM);
 	fprintf(fp_blackbox1,"%d,",ERR_NUM);
@@ -991,8 +1030,9 @@ int display_fee(unsigned char* at)
 	fprintf(fp_blackbox1,"%X,",GMCFXZ);
 	fprintf(fp_blackbox1,"%X,",ZZCFSN1);
 	fprintf(fp_blackbox1,"%X,",ZZCFSN2);
-	fprintf(fp_blackbox1,"%X,",CWTXLX);
-	fprintf(fp_blackbox1,"%X,",GMFHC);
+	fprintf(fp_blackbox1,"%s,",CWZT);
+	fprintf(fp_blackbox1,"%s,",FFHTB);
+	fprintf(fp_blackbox1,"%s,",ZSLSN); 
 	fprintf(fp_blackbox1,"%s,",YC_NUM);
 	fprintf(fp_blackbox1,"\n");
 
@@ -1554,7 +1594,7 @@ void wr_fpbox1 (void)
 {
 	if(fp_blackbox1!=NULL)
 	{
-		fprintf(fp_blackbox1,"日期,时间,FEE+5V电流,时间码,上一指令类型-FEE工作状态,采集配置参数,接收指令计数,错误指令计数,科学数据包计数,电荷芯片1工作电流,电荷芯片2工作电流,电荷芯片3工作电流,电荷芯片1限流参数,电荷芯片2限流参数,电荷芯片3限流参数,光电管温度遥测1,光电管温度遥测2,光电管温度遥测3,光电管温度遥测4,光电管温度遥测5,光电管温度遥测6,光电管温度遥测7,光电管温度遥测8,光电管温度遥测9,FEE温度1,FEE温度2,FEE温度3,FEE温度4,Cebr采集延迟,中子首脉冲延迟,中子次脉冲延时1,中子次脉冲延迟2,双脉冲参数1,双脉冲参数2,双脉冲参数3,双脉冲参数4,伽马通道使能,中子通道使能1,中子通道使能2,错误状态,科学数据时间-伽马符合窗,分组标志-包序列计数,\n");
+		fprintf(fp_blackbox1,"日期,时间,FEE+5V电流,时间码,上一指令类型-FEE工作状态,采集配置参数,接收指令计数,错误指令计数,科学数据包计数,电荷芯片1工作电流,电荷芯片2工作电流,电荷芯片3工作电流,电荷芯片1限流参数,电荷芯片2限流参数,电荷芯片3限流参数,光电管温度遥测1,光电管温度遥测2,光电管温度遥测3,光电管温度遥测4,光电管温度遥测5,光电管温度遥测6,光电管温度遥测7,光电管温度遥测8,光电管温度遥测9,FEE温度1,FEE温度2,FEE温度3,FEE温度4,Cebr采集延迟,中子首脉冲延迟,中子次脉冲延时1,中子次脉冲延迟2,双脉冲参数1,双脉冲参数2,双脉冲参数3,双脉冲参数4,伽马通道使能,中子通道使能1,中子通道使能2,错误状态,科学数据时间-伽马符合窗,多触发使能-各通道逐事例使能,分组标志-包序列计数,\n");
 	}
 	else  wr_fpbox1;
 }
