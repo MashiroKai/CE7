@@ -1,1 +1,1 @@
--force-include-file "EPH5275_PNP.c";"g:\CE7\Software\CE7_GTS2024\EPH5275_PNP.c" -force-include-file "EPH5275_PNP.h";"g:\CE7\Software\CE7_GTS2024\EPH5275_PNP.h" -force-include-file "ftd2xx_wp.h";"g:\CE7\Software\CE7_GTS2024\ftd2xx_wp.h" 
+-force-include-file "EPH5275_PNP.c";"c:\Users\DELL2\Desktop\CE7\Software\CE7_GTS2024\EPH5275_PNP.c" -force-include-file "EPH5275_PNP.h";"c:\Users\DELL2\Desktop\CE7\Software\CE7_GTS2024\EPH5275_PNP.h" -force-include-file "ftd2xx_wp.h";"c:\Users\DELL2\Desktop\CE7\Software\CE7_GTS2024\ftd2xx_wp.h" 

@@ -787,8 +787,8 @@ int display_fee(unsigned char* at)
 	unsigned char STATUS[100] = "";//2 bytes 上一指令类型 - FEE工作状态
 	unsigned char tmp6[100] = "";
 	unsigned char tmp7[100] = "";
-	Fmt(tmp6,"%s<%X",SYZLLX);
-	Fmt(tmp7,"%s<%b",GZZT);
+	Fmt(tmp6,"%s<%x",SYZLLX);
+	Fmt(tmp7,"%s<%x",GZZT);
 	strcat(STATUS,tmp6);
 	strcat(STATUS,"_");
 	strcat(STATUS,tmp7);		
@@ -837,20 +837,18 @@ int display_fee(unsigned char* at)
 	unsigned char tmp9[100] = "";
 	unsigned char PTXXZT = at[base+57]>>6;//平台信息状突 中子锁定信号
 	unsigned char CWTXLX =at[base+57]&0x3F;//错误状态
-	Fmt(tmp8,"%s<%b",PTXXZT);
-	Fmt(tmp9,"%s<%X",CWTXLX);
+	Fmt(tmp8,"%s<%x",PTXXZT);
+	Fmt(tmp9,"%s<%x",CWTXLX);
 	strcat(CWZT,tmp8);
 	strcat(CWZT,"_");
 	strcat(CWZT,tmp9); 
-	
-	
 	unsigned char FFHTB[100] ="";//反符合同步 
 	unsigned char tmp10[100] = "";
 	unsigned char tmp11[100] = "";
 	unsigned char KXSJPL = at[base+58]>>6;//平台信息状突 中子锁定信号
 	unsigned char FFHC =at[base+58]&0x3F;//错误状态
-	Fmt(tmp10,"%s<%b",KXSJPL);
-	Fmt(tmp11,"%s<%X",KXSJPL);
+	Fmt(tmp10,"%s<%x",KXSJPL);
+	Fmt(tmp11,"%s<%x",FFHC);
 	strcat(FFHTB,tmp10);
 	strcat(FFHTB,"_");
 	strcat(FFHTB,tmp11); 
@@ -858,13 +856,28 @@ int display_fee(unsigned char* at)
 	unsigned char tmp12[100] = "";
 	unsigned char tmp13[100] = "";
 	unsigned char DCFSN = at[base+59]>>7;//平台信息状突 中子锁定信号
-	unsigned char GTDZSLSN =((at[base+59]&0x7F)*256 + at[base+60]&0xC0)>>6;//错误状态
-	Fmt(tmp12,"%s<%b",DCFSN);
-	Fmt(tmp13,"%s<%b",GTDZSLSN);
+	unsigned short int  temp14 =((at[base+59]>>1)*256) + (at[base+60]&0xC0);//错误状态
+	unsigned short int  GTDZSLSN  = temp14>>6;
+	Fmt(tmp12,"%s<%x",DCFSN);
+	Fmt(tmp13,"%s<%x",GTDZSLSN);
 	strcat(ZSLSN,tmp12);
 	strcat(ZSLSN,"_");
-	strcat(ZSLSN,tmp13); 
-	
+	strcat(ZSLSN,tmp13);
+	unsigned char QL1 = at[base+61]; 
+	unsigned char QL2 = at[base+62];
+	unsigned char QL3 = at[base+63];
+	unsigned char QL[100] = "";
+	unsigned char tmp14[100] = "";
+	unsigned char tmp15[100] = "";
+	unsigned char tmp16[100] = ""; 	
+	Fmt(tmp14,"%s<%x",QL1);
+	Fmt(tmp15,"%s<%x",QL2);
+	Fmt(tmp16,"%s<%x",QL3);
+	strcat(QL,tmp14);
+	strcat(QL,"_");
+	strcat(QL,tmp15);
+	strcat(QL,"_");
+	strcat(QL,tmp16);
 	double Temp_Cebr3 = yc(CeBr3);
 	double Temp_PMT1 = yc(PMT1);
 	double Temp_PMT2 = yc(PMT2);
@@ -920,7 +933,8 @@ int display_fee(unsigned char* at)
 	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (2, 13), ATTR_CTRL_VAL, CWZT);//错误状态
 	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (4, 13), ATTR_CTRL_VAL, FFHTB);//科学数据时间-伽马符合窗
 	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (6, 13), ATTR_CTRL_VAL, ZSLSN);//分组标志-包序列计数
-	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (2, 14), ATTR_CTRL_VAL, YC_NUM);//分组标志-包序列计数   
+	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (2, 14), ATTR_CTRL_VAL, YC_NUM);//分组标志-包序列计数 
+	SetTableCellAttribute (PnlHandle, PANEL_TABLE, MakePoint (4, 14), ATTR_CTRL_VAL, QL);//空闲字节 
 	//draw current plot
 	int limited_array=30;
 	int cnt_va0=0;
@@ -1034,6 +1048,7 @@ int display_fee(unsigned char* at)
 	fprintf(fp_blackbox1,"%s,",FFHTB);
 	fprintf(fp_blackbox1,"%s,",ZSLSN); 
 	fprintf(fp_blackbox1,"%s,",YC_NUM);
+	fprintf(fp_blackbox1,"%s,",QL); 
 	fprintf(fp_blackbox1,"\n");
 
 	return 0;
@@ -1594,7 +1609,7 @@ void wr_fpbox1 (void)
 {
 	if(fp_blackbox1!=NULL)
 	{
-		fprintf(fp_blackbox1,"日期,时间,FEE+5V电流,时间码,上一指令类型-FEE工作状态,采集配置参数,接收指令计数,错误指令计数,科学数据包计数,电荷芯片1工作电流,电荷芯片2工作电流,电荷芯片3工作电流,电荷芯片1限流参数,电荷芯片2限流参数,电荷芯片3限流参数,光电管温度遥测1,光电管温度遥测2,光电管温度遥测3,光电管温度遥测4,光电管温度遥测5,光电管温度遥测6,光电管温度遥测7,光电管温度遥测8,光电管温度遥测9,FEE温度1,FEE温度2,FEE温度3,FEE温度4,Cebr采集延迟,中子首脉冲延迟,中子次脉冲延时1,中子次脉冲延迟2,双脉冲参数1,双脉冲参数2,双脉冲参数3,双脉冲参数4,伽马通道使能,中子通道使能1,中子通道使能2,错误状态,科学数据时间-伽马符合窗,多触发使能-各通道逐事例使能,分组标志-包序列计数,\n");
+		fprintf(fp_blackbox1,"日期,时间,FEE+5V电流,时间码,上一指令类型-FEE工作状态,采集配置参数,接收指令计数,错误指令计数,科学数据包计数,电荷芯片1工作电流,电荷芯片2工作电流,电荷芯片3工作电流,电荷芯片1限流参数,电荷芯片2限流参数,电荷芯片3限流参数,光电管温度遥测1,光电管温度遥测2,光电管温度遥测3,光电管温度遥测4,光电管温度遥测5,光电管温度遥测6,光电管温度遥测7,光电管温度遥测8,光电管温度遥测9,FEE温度1,FEE温度2,FEE温度3,FEE温度4,Cebr采集延迟,中子首脉冲延迟,中子次脉冲延时1,中子次脉冲延迟2,双脉冲参数0,双脉冲参数1,双脉冲参数2,双脉冲参数3,伽马通道选择,中子通道使能1,中子通道使能2,错误状态,科学数据时间-伽马符合窗,多触发使能-各通道逐事例使能,分组标志-包序列计数,全零\n");
 	}
 	else  wr_fpbox1;
 }
@@ -2005,11 +2020,13 @@ int CVICALLBACK Hk_Request (int panel, int control, int event,
 			{
 				SetCtrlAttribute(PnlHandle,PANEL_UART_SET,ATTR_DIMMED,1);
 				SetCtrlAttribute(PnlHandle,PANEL_GTRESET,ATTR_DIMMED,1);
+				SetCtrlAttribute(PnlHandle,PANEL_hkOnce,ATTR_DIMMED,1); 
 			}
 			else
 			{
 				SetCtrlAttribute(PnlHandle,PANEL_UART_SET,ATTR_DIMMED,0);
 				SetCtrlAttribute(PnlHandle,PANEL_GTRESET,ATTR_DIMMED,0);
+				SetCtrlAttribute(PnlHandle,PANEL_hkOnce,ATTR_DIMMED,0);
 			}
 			break;
 	}

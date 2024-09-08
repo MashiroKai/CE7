@@ -1,0 +1,6 @@
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\CE_7\VA复位2指令.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\CE_7\config.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\CE_7\FPGA配置-采集控制通道-ram地址-触发延时-03.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\CE_7\FPGA配置-采集阈值-大信号阈值-2F.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\CE_7\FPGA配置-大信号锁定-时间-逐事例通道-0F.bin
+注入指令 d:\HXI_ZY_Ground_Test_Software\HXI_CMD_GENERATOR\FEE_CODE\CE_7\FPGA更改模式-观测.bin

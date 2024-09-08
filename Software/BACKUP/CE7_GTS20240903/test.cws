@@ -1,0 +1,236 @@
+[Workspace Header]
+Version = 1700
+Pathname = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/test.cws"
+CVI Dir = "/c/program files (x86)/national instruments/cvi2017"
+CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2017"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "test.prj"
+Drag Bar Left = 160
+Window Top = 70
+Window Left = 26
+Window Bottom = 572
+Window Right = 1011
+Maximized = True
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win At Start = True
+Bring Up Err Win For Errors = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 7
+Window Confinement Region Enabled = True
+MainColumnWidth = 143
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+
+[Project Header 0001]
+Version = 1700
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Debug"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
+File Type = "Include"
+Disk Date = 3573565200
+In Projects = ""
+Window Top = 157
+Window Left = 74
+Window Z-Order = 4
+Source Window State = "1,65,65,65,12,25,25,0,3,84,0,0,0,0,0,24,53,0,65,12,511,895,1,0,"
+
+[File 0002]
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/string.h"
+File Type = "Include"
+Disk Date = 3573565200
+In Projects = ""
+Window Top = 33
+Window Left = 10
+Window Z-Order = 3
+Source Window State = "1,46,46,46,16,22,22,0,3,84,0,0,0,0,0,24,27,0,46,16,511,895,1,0,"
+
+[File 0003]
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/formatio.h"
+File Type = "Include"
+Disk Date = 3573565200
+In Projects = ""
+Window Top = 64
+Window Left = 26
+Window Z-Order = 5
+Source Window State = "1,48,48,48,34,35,34,0,0,84,0,0,0,0,0,24,43,0,63,62,511,895,1,0,"
+
+[File 0004]
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdlib.h"
+File Type = "Include"
+Disk Date = 3573565200
+In Projects = ""
+Window Top = 33
+Window Left = 10
+Window Z-Order = 6
+Source Window State = "1,0,0,0,0,0,0,0,0,53,0,0,0,0,0,14,0,0,0,0,323,583,1,0,"
+
+[File 0005]
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/userint.h"
+File Type = "Include"
+Disk Date = 3573565200
+In Projects = ""
+Window Top = 33
+Window Left = 10
+Window Z-Order = 7
+Source Window State = "1,2209,2209,2209,14,30,30,0,3,67,0,0,0,0,0,14,2197,0,2209,14,323,721,1,0,"
+
+[File 0006]
+Path = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.c"
+File Type = "CSource"
+Disk Date = 3808176851
+In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Window Z-Order = 1
+Source Window State = "1,1466,1466,1466,16,28,28,0,3,184,0,683,0,2692,0,50,1441,0,1466,16,323,721,1,13,"
+
+[File 0007]
+Path = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.uir"
+File Type = "User Interface Resource"
+Disk Date = 3808176851
+In Projects = "1,"
+Window Top = 188
+Window Left = 90
+Window Height = 323
+Window Width = 517
+Window Z-Order = 2
+
+[File 0008]
+Path = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.h"
+File Type = "Include"
+Disk Date = 3808176851
+In Projects = "1,"
+Window Top = 157
+Window Left = 74
+Source Window State = "1,95,95,95,9,22,9,0,3,0,0,30,0,0,0,0,79,0,95,22,323,541,1,11,"
+
+[File 0009]
+Path = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/ftd2xx_wp.h"
+File Type = "Include"
+Disk Date = 3808176851
+In Projects = "1,"
+Window Top = 218
+Window Left = 106
+Source Window State = "1,0,11,11,0,0,51,0,0,0,0,12,0,12,0,0,0,0,12,59,583,774,1,0,"
+
+[Tab Order]
+Tab 0001 = "/c/Program Files (x86)/National Instruments/CVI2017/include/userint.h"
+Tab 0002 = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdlib.h"
+Tab 0003 = "/c/Program Files (x86)/National Instruments/CVI2017/include/formatio.h"
+Tab 0004 = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
+Tab 0005 = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/string.h"
+Tab 0006 = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.uir"
+Tab 0007 = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.c"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Build Dependencies 0001]
+Number of Dependencies = 0
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+
+[Watch 1]
+Watch Expression = "gt_buffer"
+
