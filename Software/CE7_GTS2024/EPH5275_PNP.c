@@ -782,21 +782,18 @@ int display_fee(unsigned char* at)
 	}//检测包序列不连续错误并打印在文本框
 	Last_Num = Curr_Num;
 	
-	unsigned char TIMECODE[7] = ""  ;
-	//for(int i = 0; i<6 ;i++){
-	//unsigned char temp[10]	
-	//}
-	strcat(TIMECODE , at[base]);
-	strcat(TIMECODE , at[base+1]);
-	strcat(TIMECODE , at[base+2]);
-	strcat(TIMECODE , at[base+3]);
-	strcat(TIMECODE , at[base+4]);
-	strcat(TIMECODE , "-");
-	strcat(TIMECODE , at[base+5]);
-	strcat(TIMECODE , at[base+6]);
-	//6 bytes系统时间码 
+	unsigned char TIMECODE[100] = ""  ;
+	for(int i = 0; i<6 ;i++){
+		unsigned char temp = at[base + i];
+		unsigned char tmp[10] ="";
+		Fmt(tmp,"%s<%x",temp);
+		strcat(TIMECODE , tmp);
+		if(i==3) strcat(TIMECODE , "-");
+	}
 	
-		//=(at[base+0]*1099511627776 + at[base+1]*4294967296 + at[base+2]*16777216 + at[base+3]*65536 + at[base+4]*256 + at[base+5]); //6 bytes系统时间码
+	
+	unsigned int  TCSEC	=at[base+0]*16777216 + at[base+1]*65536 + at[base+2]*256 + at[base+3] ;//sec
+	unsigned int  TCMILSEC = at[base+4]*256 + at[base+5]; //6 bytes系统时间码
 	unsigned char SYZLLX = at[base+6];//1byte 上一指令类型
 	unsigned char GZZT = at[base+7];
 	unsigned char STATUS[100] = "";//2 bytes 上一指令类型 - FEE工作状态
@@ -1023,7 +1020,8 @@ int display_fee(unsigned char* at)
 	fprintf(fp_blackbox1,"%s,",sdate);
 	fprintf(fp_blackbox1,"%s,",stime);
 	fprintf(fp_blackbox1,"%s,",fee_current);
-	fprintf(fp_blackbox1,"%s,",TIMECODE);
+	fprintf(fp_blackbox1,"%X,",TCSEC);
+	fprintf(fp_blackbox1,"%X,",TCMILSEC);
 	fprintf(fp_blackbox1,"%s,",STATUS);
 	fprintf(fp_blackbox1,"%X,",COL_PAR);
 	fprintf(fp_blackbox1,"%d,",RX_NUM);
@@ -1624,7 +1622,7 @@ void wr_fpbox1 (void)
 {
 	if(fp_blackbox1!=NULL)
 	{
-		fprintf(fp_blackbox1,"日期,时间,FEE+5V电流,时间码,上一指令类型-FEE工作状态,采集配置参数,接收指令计数,错误指令计数,科学数据包计数,电荷芯片1工作电流,电荷芯片2工作电流,电荷芯片3工作电流,电荷芯片1限流参数,电荷芯片2限流参数,电荷芯片3限流参数,光电管温度遥测1,光电管温度遥测2,光电管温度遥测3,光电管温度遥测4,光电管温度遥测5,光电管温度遥测6,光电管温度遥测7,光电管温度遥测8,光电管温度遥测9,FEE温度1,FEE温度2,FEE温度3,FEE温度4,Cebr采集延迟,中子首脉冲延迟,中子次脉冲延时1,中子次脉冲延迟2,双脉冲参数0,双脉冲参数1,双脉冲参数2,双脉冲参数3,伽马通道选择,中子通道使能1,中子通道使能2,错误状态,科学数据时间-伽马符合窗,多触发使能-各通道逐事例使能,分组标志-包序列计数,全零\n");
+		fprintf(fp_blackbox1,"日期,时间,FEE+5V电流,时间码:秒,时间码:毫秒,上一指令类型-FEE工作状态,采集配置参数,接收指令计数,错误指令计数,科学数据包计数,电荷芯片1工作电流,电荷芯片2工作电流,电荷芯片3工作电流,电荷芯片1限流参数,电荷芯片2限流参数,电荷芯片3限流参数,光电管温度遥测1,光电管温度遥测2,光电管温度遥测3,光电管温度遥测4,光电管温度遥测5,光电管温度遥测6,光电管温度遥测7,光电管温度遥测8,光电管温度遥测9,FEE温度1,FEE温度2,FEE温度3,FEE温度4,Cebr采集延迟,中子首脉冲延迟,中子次脉冲延时1,中子次脉冲延迟2,双脉冲参数0,双脉冲参数1,双脉冲参数2,双脉冲参数3,伽马通道选择,中子通道使能1,中子通道使能2,错误状态,科学数据时间-伽马符合窗,多触发使能-各通道逐事例使能,分组标志-包序列计数,全零\n");
 	}
 	else  wr_fpbox1;
 }
