@@ -1,7 +1,7 @@
-#include "C:\Program Files (x86)\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
+#include "D:\Program Files (x86)\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
 
-2 ICON "c:\\program files (x86)\\national instruments\\cvi2017\\bin\\default.ico"
-1 24 "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\manifest.xml"
+2 ICON "d:\\program files (x86)\\national instruments\\cvi2017\\bin\\default.ico"
+1 24 "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\manifest.xml"
 
 
 STRINGTABLE DISCARDABLE

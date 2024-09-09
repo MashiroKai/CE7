@@ -781,7 +781,22 @@ int display_fee(unsigned char* at)
 		SetCtrlAttribute (PnlHandle, PANEL_TEXTBOX_2,ATTR_CTRL_VAL, s);
 	}//检测包序列不连续错误并打印在文本框
 	Last_Num = Curr_Num;
-	__int64 TIMECODE =(at[base+0]*1099511627776 + at[base+1]*4294967296 + at[base+2]*16777216 + at[base+3]*65536 + at[base+4]*256 + at[base+5]); //6 bytes系统时间码
+	
+	unsigned char TIMECODE[7] = ""  ;
+	//for(int i = 0; i<6 ;i++){
+	//unsigned char temp[10]	
+	//}
+	strcat(TIMECODE , at[base]);
+	strcat(TIMECODE , at[base+1]);
+	strcat(TIMECODE , at[base+2]);
+	strcat(TIMECODE , at[base+3]);
+	strcat(TIMECODE , at[base+4]);
+	strcat(TIMECODE , "-");
+	strcat(TIMECODE , at[base+5]);
+	strcat(TIMECODE , at[base+6]);
+	//6 bytes系统时间码 
+	
+		//=(at[base+0]*1099511627776 + at[base+1]*4294967296 + at[base+2]*16777216 + at[base+3]*65536 + at[base+4]*256 + at[base+5]); //6 bytes系统时间码
 	unsigned char SYZLLX = at[base+6];//1byte 上一指令类型
 	unsigned char GZZT = at[base+7];
 	unsigned char STATUS[100] = "";//2 bytes 上一指令类型 - FEE工作状态
@@ -1008,7 +1023,7 @@ int display_fee(unsigned char* at)
 	fprintf(fp_blackbox1,"%s,",sdate);
 	fprintf(fp_blackbox1,"%s,",stime);
 	fprintf(fp_blackbox1,"%s,",fee_current);
-	fprintf(fp_blackbox1,"%lld,",TIMECODE);
+	fprintf(fp_blackbox1,"%s,",TIMECODE);
 	fprintf(fp_blackbox1,"%s,",STATUS);
 	fprintf(fp_blackbox1,"%X,",COL_PAR);
 	fprintf(fp_blackbox1,"%d,",RX_NUM);

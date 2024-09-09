@@ -1,45 +1,45 @@
 CCFLAGS = -g ;
-HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\word"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\excel"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl\\custsupp"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\cvirtsup"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\datasock"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\daqUtil"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\printing"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\toolbox"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\reportgen"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\localui"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\instr"
-	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
-	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
-	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+HDRS = 	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\word"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\excel"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl\\custsupp"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\cvirtsup"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\datasock"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\daqUtil"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\printing"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\toolbox"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\reportgen"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\localui"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\instr"
+	"D:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"D:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"D:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
 	"C:\\ProgramData\\National Instruments\\CVI2017\\instr"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\include"
-	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\include"
+	"D:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
 	"C:\\ProgramData\\National Instruments\\CVI2017\\include"
 	"C:\\ProgramData\\National Instruments\\CVI\\include"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\include\\ansi"
-	"c:\\program files (x86)\\national instruments\\cvi2017\\include\\clang\\3.3"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\include\\ansi"
+	"d:\\program files (x86)\\national instruments\\cvi2017\\include\\clang\\3.3"
 	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
 	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
-	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
-	"c:\\Program Files (x86)\\National Instruments\\CVI2017\\bin"
+	"D:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"d:\\Program Files (x86)\\National Instruments\\CVI2017\\bin"
 	"c:\\ProgramData\\National Instruments\\CVI2017\\bin"
-	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	"d:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
 	;
 include Jamfile_instr ;
-LOCATE on "EPH5275_PNP.c" = "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024" ;
-LOCATE on "EPH5275_PNP.h" = "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024" ;
-LOCATE on "ftd2xx_wp.h" = "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024" ;
-Object "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" : "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\EPH5275_PNP.c" ;
-FILENUM on "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" = 1 ;
-DEFPROTS on "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" = "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj.cvidefprots" ;
-OUTFILE on "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" = "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj.out" ;
-PrjObjects += "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" ;
-Object "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\resources.res" : "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\resources.in.rc" ;
-Depends "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\resources.res" : "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\manifest.xml" ;
-MainFromObjects "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\test.exe" : $(PrjObjects) $(InstrObjects) ;
-Depends "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\test.exe" : "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\link_options.txt" ;
-Depends "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\test.exe" : "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\resources.res" ;
-Depends all : "c:\\Users\\DELL2\\Desktop\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\test.exe" ;
+LOCATE on "EPH5275_PNP.c" = "g:\\CE7\\Software\\CE7_GTS2024" ;
+LOCATE on "EPH5275_PNP.h" = "g:\\CE7\\Software\\CE7_GTS2024" ;
+LOCATE on "ftd2xx_wp.h" = "g:\\CE7\\Software\\CE7_GTS2024" ;
+Object "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" : "g:\\CE7\\Software\\CE7_GTS2024\\EPH5275_PNP.c" ;
+FILENUM on "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" = 1 ;
+DEFPROTS on "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" = "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj.cvidefprots" ;
+OUTFILE on "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" = "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj.out" ;
+PrjObjects += "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\EPH5275_PNP.obj" ;
+Object "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\resources.res" : "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\resources.in.rc" ;
+Depends "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\resources.res" : "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\manifest.xml" ;
+MainFromObjects "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\test.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\test.exe" : "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\link_options.txt" ;
+Depends "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\test.exe" : "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\resources.res" ;
+Depends all : "g:\\CE7\\Software\\CE7_GTS2024\\cvibuild.test\\Debug\\test.exe" ;
