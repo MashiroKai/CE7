@@ -187,7 +187,15 @@ int CONFIC_FLAG = -1;
 int GT_FLAG = -1;
 int UART_FLAG = -1;
 int HK_ONCE = -1;
+int SENDERROR_FLAG = -1;
+int sel = 0;  
 int LoadDLL();
+void CSCW();
+void JYCW();
+void CDCW();
+void LXCW();
+void BTCW();
+void BSCW();
 
 typedef FT_STATUS (WINAPI *PtrToOpen)(int, FT_HANDLE *);
 PtrToOpen g_pOpen;
@@ -1313,6 +1321,7 @@ int CVICALLBACK asynCB (int reserved, int timerId, int event,
 	unsigned char a[268];
 	char POWERFLAG=0;
 
+
 	switch (event)
 	{
 		case EVENT_TIMER_TICK:
@@ -1516,18 +1525,45 @@ int CVICALLBACK asynCB (int reserved, int timerId, int event,
 			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%10==5&&PF_FLAG == 1) Pf();
 			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%10==6)
 			{
-				if(POWERFLAG >0 &&ERR1_FLAG==1) ERROR1();
-				if(POWERFLAG >0 &&ERR2_FLAG==1) ERROR2();
 				//if(TIME_FLAG==1) TimeCode();
 				if(POWERFLAG >0 &&SHUT_FLAG==1) SD();
-				if(POWERFLAG >0 &&CONFIC_FLAG==1) configmode();
 				if(POWERFLAG >0 &&GT_FLAG ==1) GTRESET();
 				if(POWERFLAG >0 &&(Muti_FLAG>0)) mutisend();
 				if(POWERFLAG >0 &&UART_FLAG == 1) UARTCONFIG();
+				if(POWERFLAG >0 &&SENDERROR_FLAG == 1){
+					switch(sel)
+					{
+						case 0 :
+						//超时错误
+						CSCW();
+							break;
+						case 1 :
+						//包头错误
+						BTCW();
+							break;
+						case 2 :
+						//标识错误
+						BSCW();
+							break;
+						case 3 :
+						//类型错误
+						LXCW();
+							break;
+						case 4 :
+						//长度错误
+						CDCW();
+							break;
+						case 5 :
+						//校验错误
+						JYCW();
+							break;
+					}
 			}
-			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%20==7)
+			}
+			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%10==7)
 			{
 				if(OBSE_FLAG==1) observemode();
+				if(CONFIC_FLAG==1) configmode();
 			}
 			if(POWERFLAG >0 &&com_state0>=0 && Tcnt%100==8)
 			{
@@ -1859,113 +1895,7 @@ void SD (void)
 
 }
 
-int CVICALLBACK ERROR_CMD1 (int panel, int control, int event,
-							void *callbackData, int eventData1, int eventData2)
-{
-	unsigned char st[100000]="";
-	unsigned char cmd[9];
-	unsigned int tmp = 0;
-	switch (event)
-	{
-		case EVENT_COMMIT:
-			ERR1_FLAG = 1;
 
-			cmd[0] = 0xEB;
-			cmd[1] = 0x90;
-			cmd[2] = 4;
-			cmd[3] = 0x94;
-			cmd[4] = 1;
-			cmd[5]= 0x94;
-			cmd[6] = 0x94;
-			tmp = 4 + 0x94 + 1 + 0x94 + 0x94;
-			cmd[7] = (tmp>>8) & 0xFF;
-			cmd[8] = tmp & 0xFF;
-			display_date();
-			display_time();
-			strcat(st,sdate);
-			strcat(st,stime);
-			strcat(st," 错误指令\n");
-			SetCtrlVal (PnlHandle, PANEL_TEXTBOX_2,st);
-			display_date();
-			display_time();
-			fprintf(fp_blackbox2,"\n\n%s %s",sdate,stime);
-			fprintf(fp_blackbox2,"\nTX: ");
-			for(int k=0; k<9; k++)fprintf(fp_blackbox2," %02X",cmd[k]);
-			break;
-	}
-	return 0;
-}
-void ERROR1 (void)
-{
-	ERR1_FLAG = -1;
-	unsigned char cmd[9];
-	unsigned int tmp = 0;
-	cmd[0] = 0xEB;
-	cmd[1] = 0x90;
-	cmd[2] = 4;
-	cmd[3] = 0x94;
-	cmd[4] = 1;
-	cmd[5]= 0x94;
-	cmd[6] = 0x94;
-	tmp = 4 + 0x94 + 1 + 0x94 + 0x94;
-	cmd[7] = (tmp>>8) & 0xFF;
-	cmd[8] = tmp & 0xFF;
-	ComWrt(COM_port0,cmd,8);
-
-}
-int CVICALLBACK ERROR_CMD2 (int panel, int control, int event,
-							void *callbackData, int eventData1, int eventData2)
-{
-	unsigned char st[100000]="";
-	unsigned char cmd[9];
-	unsigned int tmp = 0;
-	switch (event)
-	{
-		case EVENT_COMMIT:
-			ERR2_FLAG = 1;
-
-			cmd[0] = 0xEB;
-			cmd[1] = 0x90;
-			cmd[2] = 4;
-			cmd[3] = 0x94;
-			cmd[4] = 1;
-			cmd[5]= 0x94;
-			cmd[6] = 0x94;
-			tmp = 4 + 0x94 + 1 + 0x94 + 0x94+5;
-			cmd[7] = (tmp>>8) & 0xFF;
-			cmd[8] = tmp & 0xFF;
-			display_date();
-			display_time();
-			strcat(st,sdate);
-			strcat(st,stime);
-			strcat(st," 错误指令\n");
-			SetCtrlVal (PnlHandle, PANEL_TEXTBOX_2,st);
-			display_date();
-			display_time();
-			fprintf(fp_blackbox2,"\n\n%s %s",sdate,stime);
-			fprintf(fp_blackbox2,"\nTX: ");
-			for(int k=0; k<9; k++)fprintf(fp_blackbox2," %02X",cmd[k]);
-			break;
-	}
-	return 0;
-}
-void ERROR2 (void)
-{
-	ERR2_FLAG = -1;
-	unsigned char cmd[9];
-	unsigned int tmp = 0;
-	cmd[0] = 0xEB;
-	cmd[1] = 0x90;
-	cmd[2] = 4;
-	cmd[3] = 0x94;
-	cmd[4] = 1;
-	cmd[5]= 0x94;
-	cmd[6] = 0x94;
-	tmp = 4 + 0x94 + 1 + 0x94 + 0x94+5;
-	cmd[7] = (tmp>>8) & 0xFF;
-	cmd[8] = tmp & 0xFF;
-	ComWrt(COM_port0,cmd,9);
-}
 int CVICALLBACK TimeCode_Set (int panel, int control, int event,
 							  void *callbackData, int eventData1, int eventData2)
 {
@@ -2633,8 +2563,8 @@ int CVICALLBACK AUTOMODE (int panel, int control, int event,
 			{
 				SetCtrlAttribute(PnlHandle,PANEL_GTRESET,ATTR_DIMMED,1);
 				SetCtrlAttribute(PnlHandle,PANEL_TIMECODE,ATTR_DIMMED,1);
-				SetCtrlAttribute(PnlHandle,PANEL_ERROR1,ATTR_DIMMED,1);
-				SetCtrlAttribute(PnlHandle,PANEL_ERROR2,ATTR_DIMMED,1);
+				SetCtrlAttribute(PnlHandle,PANEL_SENDERROR,ATTR_DIMMED,1);
+				//SetCtrlAttribute(PnlHandle,PANEL_ERROR2,ATTR_DIMMED,1);
 				SetCtrlAttribute(PnlHandle,PANEL_SHUTDOWN,ATTR_DIMMED,1);
 				SetCtrlAttribute(PnlHandle,PANEL_HK_REQUEST,ATTR_DIMMED,1);
 				SetCtrlAttribute(PnlHandle,PANEL_PF_ENABLE,ATTR_DIMMED,1);
@@ -2652,8 +2582,8 @@ int CVICALLBACK AUTOMODE (int panel, int control, int event,
 				if(HK_FLAG == 0) SetCtrlAttribute(PnlHandle,PANEL_UART_SET,ATTR_DIMMED,0);
 				SetCtrlAttribute(PnlHandle,PANEL_GTRESET,ATTR_DIMMED,0);
 				SetCtrlAttribute(PnlHandle,PANEL_TIMECODE,ATTR_DIMMED,0);
-				SetCtrlAttribute(PnlHandle,PANEL_ERROR1,ATTR_DIMMED,0);
-				SetCtrlAttribute(PnlHandle,PANEL_ERROR2,ATTR_DIMMED,0);
+				SetCtrlAttribute(PnlHandle,PANEL_SENDERROR,ATTR_DIMMED,0);
+				//SetCtrlAttribute(PnlHandle,PANEL_ERROR2,ATTR_DIMMED,0);
 				SetCtrlAttribute(PnlHandle,PANEL_SHUTDOWN,ATTR_DIMMED,0);
 				SetCtrlAttribute(PnlHandle,PANEL_HK_REQUEST,ATTR_DIMMED,0);
 				SetCtrlAttribute(PnlHandle,PANEL_PF_ENABLE,ATTR_DIMMED,0);
@@ -2787,3 +2717,204 @@ int CVICALLBACK hkOnce (int panel, int control, int event,
 	}
 	return 0;
 }
+
+int CVICALLBACK SendError (int panel, int control, int event,
+						   void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			SENDERROR_FLAG = 1;
+			GetCtrlAttribute (panel, PANEL_ERRORSEL,ATTR_CTRL_VAL, &sel);
+			break;
+	}
+	return 0;
+}
+
+void CSCW (void)
+{   
+	SENDERROR_FLAG = -1;
+	int length = 8;
+	unsigned char st[1000]="";
+	unsigned char cmd[length];
+	unsigned int tmp = 0;
+	cmd[0] = 0xEB;
+	cmd[1] = 0x90;
+	cmd[2] = 4;
+	cmd[3] = 0x94;
+	cmd[4] = 1;
+	cmd[5]= 0x94;
+	cmd[6] = 0x94;
+	tmp = 4 + 0x94 + 1 + 0x94 + 0x94;
+	cmd[7] = (tmp>>8) & 0xFF;
+	//cmd[8] = tmp & 0xFF; //
+	ComWrt(COM_port0,cmd,length);
+	display_date();
+	display_time();
+	strcat(st,sdate);
+	strcat(st,stime);
+	strcat(st," 超时错误指令\n");
+	SetCtrlVal (PnlHandle, PANEL_TEXTBOX_2,st);
+	display_date();
+	display_time();
+	fprintf(fp_blackbox2,"\n\n%s %s",sdate,stime);
+	fprintf(fp_blackbox2,"\nTX: ");
+	for(int k=0; k<length; k++)fprintf(fp_blackbox2," %02X",cmd[k]);
+}
+
+void JYCW (void)
+{
+	SENDERROR_FLAG = -1;
+	int length = 9;
+	unsigned char st[1000]=""; 
+	unsigned char cmd[length];
+	unsigned int tmp = 0;
+	cmd[0] = 0xEB;
+	cmd[1] = 0x90;
+	cmd[2] = 4;
+	cmd[3] = 0x94;
+	cmd[4] = 1;
+	cmd[5]= 0x94;
+	cmd[6] = 0x94;
+	tmp = 4 + 0x94 + 1 + 0x94 + 0x94+5; //
+	cmd[7] = (tmp>>8) & 0xFF;
+	cmd[8] = tmp & 0xFF;
+	ComWrt(COM_port0,cmd,length);
+	display_date();
+	display_time();
+	strcat(st,sdate);
+	strcat(st,stime);
+	strcat(st," 校验错误指令\n");
+	SetCtrlVal (PnlHandle, PANEL_TEXTBOX_2,st);
+	display_date();
+	display_time();
+	fprintf(fp_blackbox2,"\n\n%s %s",sdate,stime);
+	fprintf(fp_blackbox2,"\nTX: ");
+	for(int k=0; k<length; k++)fprintf(fp_blackbox2," %02X",cmd[k]);
+}
+
+void CDCW (void)
+{
+	SENDERROR_FLAG = -1;
+	int length = 9;
+	unsigned char st[1000]=""; 
+	unsigned char cmd[length];
+	unsigned int tmp = 0;
+	cmd[0] = 0xEB;
+	cmd[1] = 0x90;
+	cmd[2] = 4;
+	cmd[3] = 0x94;
+	cmd[4] = 2;//
+	cmd[5]= 0x94;
+	cmd[6] = 0x94;
+	tmp = 4 + 0x94 + 2 + 0x94 + 0x94; //
+	cmd[7] = (tmp>>8) & 0xFF;
+	cmd[8] = tmp & 0xFF;
+	ComWrt(COM_port0,cmd,length);
+	display_date();
+	display_time();
+	strcat(st,sdate);
+	strcat(st,stime);
+	strcat(st," 长度错误指令\n");
+	SetCtrlVal (PnlHandle, PANEL_TEXTBOX_2,st);
+	display_date();
+	display_time();
+	fprintf(fp_blackbox2,"\n\n%s %s",sdate,stime);
+	fprintf(fp_blackbox2,"\nTX: ");
+	for(int k=0; k<length; k++)fprintf(fp_blackbox2," %02X",cmd[k]);
+}
+
+void BTCW (void)
+{
+	SENDERROR_FLAG = -1;
+	int length = 9;
+	unsigned char st[1000]=""; 
+	unsigned char cmd[length];
+	unsigned int tmp = 0;
+	cmd[0] = 0xEA;//
+	cmd[1] = 0x90;
+	cmd[2] = 4;
+	cmd[3] = 0x94;
+	cmd[4] = 1;
+	cmd[5]= 0x94;
+	cmd[6] = 0x94;
+	tmp = 4 + 0x94 + 1 + 0x94 + 0x94;
+	cmd[7] = (tmp>>8) & 0xFF;
+	cmd[8] = tmp & 0xFF;
+	ComWrt(COM_port0,cmd,length);
+	display_date();
+	display_time();
+	strcat(st,sdate);
+	strcat(st,stime);
+	strcat(st," 包头错误指令\n");
+	SetCtrlVal (PnlHandle, PANEL_TEXTBOX_2,st);
+	display_date();
+	display_time();
+	fprintf(fp_blackbox2,"\n\n%s %s",sdate,stime);
+	fprintf(fp_blackbox2,"\nTX: ");
+	for(int k=0; k<length; k++)fprintf(fp_blackbox2," %02X",cmd[k]);
+}
+
+void BSCW (void)
+{
+	SENDERROR_FLAG = -1;
+	int length = 9;
+	unsigned char st[1000]=""; 
+	unsigned char cmd[length];
+	unsigned int tmp = 0;
+	cmd[0] = 0xEB;
+	cmd[1] = 0x90;
+	cmd[2] = 3;//
+	cmd[3] = 0x94;
+	cmd[4] = 1;
+	cmd[5]= 0x94;
+	cmd[6] = 0x94;
+	tmp = 3 + 0x94 + 1 + 0x94 + 0x94; //
+	cmd[7] = (tmp>>8) & 0xFF;
+	cmd[8] = tmp & 0xFF;
+	ComWrt(COM_port0,cmd,length);
+	display_date();
+	display_time();
+	strcat(st,sdate);
+	strcat(st,stime);
+	strcat(st," 标识错误指令\n");
+	SetCtrlVal (PnlHandle, PANEL_TEXTBOX_2,st);
+	display_date();
+	display_time();
+	fprintf(fp_blackbox2,"\n\n%s %s",sdate,stime);
+	fprintf(fp_blackbox2,"\nTX: ");
+	for(int k=0; k<length; k++)fprintf(fp_blackbox2," %02X",cmd[k]);
+}
+
+void LXCW (void)
+{
+	SENDERROR_FLAG = -1;
+	int length = 9;
+	unsigned char st[1000]=""; 
+	unsigned char cmd[length];
+	unsigned int tmp = 0;
+	cmd[0] = 0xEB;
+	cmd[1] = 0x90;
+	cmd[2] = 4;
+	cmd[3] = 0x90;//
+	cmd[4] = 1;
+	cmd[5]= 0x94;
+	cmd[6] = 0x94;
+	tmp = 4 + 0x90 + 1 + 0x94 + 0x94;//
+	cmd[7] = (tmp>>8) & 0xFF;
+	cmd[8] = tmp & 0xFF;
+	ComWrt(COM_port0,cmd,length);
+	display_date();
+	display_time();
+	strcat(st,sdate);
+	strcat(st,stime);
+	strcat(st," 类型错误指令\n");
+	SetCtrlVal (PnlHandle, PANEL_TEXTBOX_2,st);
+	display_date();
+	display_time();
+	fprintf(fp_blackbox2,"\n\n%s %s",sdate,stime);
+	fprintf(fp_blackbox2,"\nTX: ");
+	for(int k=0; k<length; k++)fprintf(fp_blackbox2," %02X",cmd[k]);
+}
+
+

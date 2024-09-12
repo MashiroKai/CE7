@@ -40,62 +40,62 @@
 #define  PANEL_SendFile                   25      /* control type: command, callback function: MutiSendCmdFile */
 #define  PANEL_SelFile                    26      /* control type: command, callback function: MutiSelCmdFile */
 #define  PANEL_VA_I_0                     27      /* control type: numeric, callback function: (none) */
-#define  PANEL_ERROR2                     28      /* control type: command, callback function: ERROR_CMD2 */
-#define  PANEL_MODE2                      29      /* control type: command, callback function: CONFIGURE */
-#define  PANEL_MODE1                      30      /* control type: command, callback function: OBSERVE */
-#define  PANEL_GTRESET                    31      /* control type: command, callback function: RESET */
-#define  PANEL_CLEAR_CONFIG               32      /* control type: command, callback function: CLEAR */
-#define  PANEL_GETPWCOM                   33      /* control type: command, callback function: GETPWCOMNUM */
-#define  PANEL_GETCOM                     34      /* control type: command, callback function: GETCOMNUM */
-#define  PANEL_ERROR1                     35      /* control type: command, callback function: ERROR_CMD1 */
-#define  PANEL_SHUTDOWN                   36      /* control type: command, callback function: ShutDown */
-#define  PANEL_SAVEFILE_INTERVAL          37      /* control type: numeric, callback function: (none) */
-#define  PANEL_OBSERTIME                  38      /* control type: numeric, callback function: (none) */
-#define  PANEL_PF_ENABLE                  39      /* control type: textButton, callback function: pf_en */
-#define  PANEL_POWER_ST                   40      /* control type: textButton, callback function: Powerctrl */
-#define  PANEL_USB_MODE                   41      /* control type: textButton, callback function: (none) */
-#define  PANEL_TOGGLEBUTTON_7             42      /* control type: textButton, callback function: asyn_timerctrl */
-#define  PANEL_TEXTMSG_48                 43      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_3                  44      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_45                 45      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_56                 46      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_55                 47      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_54                 48      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_53                 49      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_52                 50      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_47                 51      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_46                 52      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG_44                 53      /* control type: textMsg, callback function: (none) */
-#define  PANEL_TEXTMSG                    54      /* control type: textMsg, callback function: (none) */
-#define  PANEL_PICTURE                    55      /* control type: picture, callback function: (none) */
-#define  PANEL_DECORATION_6               56      /* control type: deco, callback function: (none) */
-#define  PANEL_DECORATION_4               57      /* control type: deco, callback function: (none) */
-#define  PANEL_TEXTMSG_43                 58      /* control type: textMsg, callback function: (none) */
-#define  PANEL_DECORATION_5               59      /* control type: deco, callback function: (none) */
-#define  PANEL_TABLE                      60      /* control type: table, callback function: (none) */
-#define  PANEL_TIMECODE                   61      /* control type: textButton, callback function: TimeCode_Set */
-#define  PANEL_HK_REQUEST                 62      /* control type: textButton, callback function: Hk_Request */
-#define  PANEL_FEEIOUT                    63      /* control type: string, callback function: (none) */
-#define  PANEL_GTIOUT                     64      /* control type: string, callback function: (none) */
-#define  PANEL_SAVE_MINUS                 65      /* control type: command, callback function: SETSAVE_MINUS */
-#define  PANEL_SAVE_PULS                  66      /* control type: command, callback function: SETSAVE_PULS */
-#define  PANEL_POWER_COM_MINUS            67      /* control type: command, callback function: SETPOWERCOM_MINUS */
-#define  PANEL_POWER_COM_PULS             68      /* control type: command, callback function: SETPOWERCOM_PULS */
-#define  PANEL_OBSERBE_MINUS              69      /* control type: command, callback function: SETOBS_MINUS */
-#define  PANEL_OBSERVE_PULS               70      /* control type: command, callback function: SETOBS_PULS */
-#define  PANEL_COM_MINUS                  71      /* control type: command, callback function: SETCOM_MINUS */
-#define  PANEL_COM_PULS                   72      /* control type: command, callback function: SETCOM_PULS */
-#define  PANEL_AUTO                       73      /* control type: textButton, callback function: AUTOMODE */
-#define  PANEL_EX_NAME                    74      /* control type: string, callback function: (none) */
-#define  PANEL_STOPBIT                    75      /* control type: ring, callback function: (none) */
-#define  PANEL_CHECKBIT                   76      /* control type: ring, callback function: (none) */
-#define  PANEL_BYTEINTERVAL               77      /* control type: numeric, callback function: (none) */
-#define  PANEL_BAUD                       78      /* control type: numeric, callback function: (none) */
-#define  PANEL_GTIMAX                     79      /* control type: string, callback function: (none) */
-#define  PANEL_GTVMAX                     80      /* control type: string, callback function: (none) */
-#define  PANEL_FEEVMAX                    81      /* control type: string, callback function: (none) */
-#define  PANEL_FEEIMAX                    82      /* control type: string, callback function: (none) */
-#define  PANEL_hkOnce                     83      /* control type: command, callback function: hkOnce */
+#define  PANEL_MODE2                      28      /* control type: command, callback function: CONFIGURE */
+#define  PANEL_MODE1                      29      /* control type: command, callback function: OBSERVE */
+#define  PANEL_GTRESET                    30      /* control type: command, callback function: RESET */
+#define  PANEL_CLEAR_CONFIG               31      /* control type: command, callback function: CLEAR */
+#define  PANEL_GETPWCOM                   32      /* control type: command, callback function: GETPWCOMNUM */
+#define  PANEL_GETCOM                     33      /* control type: command, callback function: GETCOMNUM */
+#define  PANEL_SENDERROR                  34      /* control type: command, callback function: SendError */
+#define  PANEL_SHUTDOWN                   35      /* control type: command, callback function: ShutDown */
+#define  PANEL_SAVEFILE_INTERVAL          36      /* control type: numeric, callback function: (none) */
+#define  PANEL_OBSERTIME                  37      /* control type: numeric, callback function: (none) */
+#define  PANEL_PF_ENABLE                  38      /* control type: textButton, callback function: pf_en */
+#define  PANEL_POWER_ST                   39      /* control type: textButton, callback function: Powerctrl */
+#define  PANEL_USB_MODE                   40      /* control type: textButton, callback function: (none) */
+#define  PANEL_TOGGLEBUTTON_7             41      /* control type: textButton, callback function: asyn_timerctrl */
+#define  PANEL_TEXTMSG_48                 42      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_3                  43      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_45                 44      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_56                 45      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_55                 46      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_54                 47      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_53                 48      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_52                 49      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_47                 50      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_46                 51      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_44                 52      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG                    53      /* control type: textMsg, callback function: (none) */
+#define  PANEL_PICTURE                    54      /* control type: picture, callback function: (none) */
+#define  PANEL_DECORATION_6               55      /* control type: deco, callback function: (none) */
+#define  PANEL_DECORATION_4               56      /* control type: deco, callback function: (none) */
+#define  PANEL_TEXTMSG_43                 57      /* control type: textMsg, callback function: (none) */
+#define  PANEL_DECORATION_5               58      /* control type: deco, callback function: (none) */
+#define  PANEL_TABLE                      59      /* control type: table, callback function: (none) */
+#define  PANEL_TIMECODE                   60      /* control type: textButton, callback function: TimeCode_Set */
+#define  PANEL_HK_REQUEST                 61      /* control type: textButton, callback function: Hk_Request */
+#define  PANEL_FEEIOUT                    62      /* control type: string, callback function: (none) */
+#define  PANEL_GTIOUT                     63      /* control type: string, callback function: (none) */
+#define  PANEL_SAVE_MINUS                 64      /* control type: command, callback function: SETSAVE_MINUS */
+#define  PANEL_SAVE_PULS                  65      /* control type: command, callback function: SETSAVE_PULS */
+#define  PANEL_POWER_COM_MINUS            66      /* control type: command, callback function: SETPOWERCOM_MINUS */
+#define  PANEL_POWER_COM_PULS             67      /* control type: command, callback function: SETPOWERCOM_PULS */
+#define  PANEL_OBSERBE_MINUS              68      /* control type: command, callback function: SETOBS_MINUS */
+#define  PANEL_OBSERVE_PULS               69      /* control type: command, callback function: SETOBS_PULS */
+#define  PANEL_COM_MINUS                  70      /* control type: command, callback function: SETCOM_MINUS */
+#define  PANEL_COM_PULS                   71      /* control type: command, callback function: SETCOM_PULS */
+#define  PANEL_AUTO                       72      /* control type: textButton, callback function: AUTOMODE */
+#define  PANEL_EX_NAME                    73      /* control type: string, callback function: (none) */
+#define  PANEL_STOPBIT                    74      /* control type: ring, callback function: (none) */
+#define  PANEL_CHECKBIT                   75      /* control type: ring, callback function: (none) */
+#define  PANEL_BYTEINTERVAL               76      /* control type: numeric, callback function: (none) */
+#define  PANEL_BAUD                       77      /* control type: numeric, callback function: (none) */
+#define  PANEL_GTIMAX                     78      /* control type: string, callback function: (none) */
+#define  PANEL_GTVMAX                     79      /* control type: string, callback function: (none) */
+#define  PANEL_FEEVMAX                    80      /* control type: string, callback function: (none) */
+#define  PANEL_FEEIMAX                    81      /* control type: string, callback function: (none) */
+#define  PANEL_hkOnce                     82      /* control type: command, callback function: hkOnce */
+#define  PANEL_ERRORSEL                   83      /* control type: ring, callback function: (none) */
 
 
      /* Control Arrays: */
@@ -118,8 +118,6 @@ int  CVICALLBACK clr_box(int panel, int control, int event, void *callbackData, 
 int  CVICALLBACK clr_gamma(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK clr_neutron(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK CONFIGURE(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK ERROR_CMD1(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK ERROR_CMD2(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK GETCOMNUM(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK GETPWCOMNUM(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK Hk_Request(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
@@ -131,6 +129,7 @@ int  CVICALLBACK pf_en(int panel, int control, int event, void *callbackData, in
 int  CVICALLBACK Powerctrl(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK QuitSoft(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK RESET(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK SendError(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SETCOM_MINUS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SETCOM_PULS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SETOBS_MINUS(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);

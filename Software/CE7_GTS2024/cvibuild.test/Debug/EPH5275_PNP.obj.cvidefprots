@@ -126,22 +126,6 @@ Prototype="int ShutDown(int panel, int control, int event, void *callbackData, i
 Class="Function"
 Prototype="void SD();"
 
-[ERROR_CMD1]
-Class="Function"
-Prototype="int ERROR_CMD1(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-
-[ERROR1]
-Class="Function"
-Prototype="void ERROR1();"
-
-[ERROR_CMD2]
-Class="Function"
-Prototype="int ERROR_CMD2(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-
-[ERROR2]
-Class="Function"
-Prototype="void ERROR2();"
-
 [TimeCode_Set]
 Class="Function"
 Prototype="int TimeCode_Set(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
@@ -277,4 +261,32 @@ Prototype="int Powerctrl(int panel, int control, int event, void *callbackData, 
 [hkOnce]
 Class="Function"
 Prototype="int hkOnce(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SendError]
+Class="Function"
+Prototype="int SendError(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CSCW]
+Class="Function"
+Prototype="void CSCW();"
+
+[JYCW]
+Class="Function"
+Prototype="void JYCW();"
+
+[CDCW]
+Class="Function"
+Prototype="void CDCW();"
+
+[BTCW]
+Class="Function"
+Prototype="void BTCW();"
+
+[BSCW]
+Class="Function"
+Prototype="void BSCW();"
+
+[LXCW]
+Class="Function"
+Prototype="void LXCW();"
 
