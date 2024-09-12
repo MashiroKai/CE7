@@ -1,8 +1,8 @@
 [Workspace Header]
 Version = 1700
-Pathname = "/g/CE7/Software/CE7_GTS2024/test.cws"
-CVI Dir = "/d/program files (x86)/national instruments/cvi2017"
-CVI Shared Dir = "/D/Program Files (x86)/National Instruments/Shared/CVI"
+Pathname = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/test.cws"
+CVI Dir = "/c/program files (x86)/national instruments/cvi2017"
+CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
 CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2017"
 CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
 IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
@@ -15,8 +15,8 @@ Project 0001 = "test.prj"
 Drag Bar Left = 160
 Window Top = 70
 Window Left = 0
-Window Bottom = 1159
-Window Right = 1024
+Window Bottom = 572
+Window Right = 985
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -46,7 +46,7 @@ Batch Build Release = False
 Batch Build Debug = False
 
 [File 0001]
-Path = "/d/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
 File Type = "Include"
 Disk Date = 3573565200
 In Projects = ""
@@ -56,7 +56,7 @@ Window Z-Order = 7
 Source Window State = "1,65,65,65,12,25,25,0,3,84,0,0,0,0,0,24,54,0,65,12,511,895,1,0,"
 
 [File 0002]
-Path = "/d/Program Files (x86)/National Instruments/CVI2017/include/ansi/string.h"
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/string.h"
 File Type = "Include"
 Disk Date = 3573565200
 In Projects = ""
@@ -66,7 +66,7 @@ Window Z-Order = 8
 Source Window State = "1,46,46,46,16,22,22,0,3,84,0,0,0,0,0,24,0,0,46,16,511,895,1,0,"
 
 [File 0003]
-Path = "/d/Program Files (x86)/National Instruments/CVI2017/include/formatio.h"
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/formatio.h"
 File Type = "Include"
 Disk Date = 3573565200
 In Projects = ""
@@ -76,7 +76,7 @@ Window Z-Order = 6
 Source Window State = "1,48,48,48,34,35,34,0,0,84,0,0,0,0,0,24,43,0,63,62,511,895,1,0,"
 
 [File 0004]
-Path = "/d/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdlib.h"
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdlib.h"
 File Type = "Include"
 Disk Date = 3573565200
 In Projects = ""
@@ -86,7 +86,7 @@ Window Z-Order = 5
 Source Window State = "1,0,0,0,0,0,0,0,0,53,0,0,0,0,0,14,0,0,0,0,323,583,1,0,"
 
 [File 0005]
-Path = "/d/Program Files (x86)/National Instruments/CVI2017/include/userint.h"
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/userint.h"
 File Type = "Include"
 Disk Date = 3573565200
 In Projects = ""
@@ -96,39 +96,39 @@ Window Z-Order = 4
 Source Window State = "1,2209,2209,2209,14,30,30,0,3,67,0,0,0,0,0,14,2212,0,2209,14,323,721,1,0,"
 
 [File 0006]
-Path = "/g/CE7/Software/CE7_GTS2024/EPH5275_PNP.c"
+Path = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.c"
 File Type = "CSource"
-Disk Date = 3808973679
+Disk Date = 3808974080
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
 Window Z-Order = 1
-Source Window State Line0001 = "1,2584,2584,2584,43,55,55,0,0,184,0,2719,0,2719,0,34,2564,0,2584,58,323,721,1,13"
+Source Window State Line0001 = "1,2843,2843,2843,25,31,31,0,3,184,0,2719,0,2719,0,42,2817,0,2843,25,323,721,1,13"
 Source Window State Line0002 = ","
 
 [File 0007]
-Path = "/g/CE7/Software/CE7_GTS2024/EPH5275_PNP.uir"
+Path = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.uir"
 File Type = "User Interface Resource"
-Disk Date = 3808973626
+Disk Date = 3808974294
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
 Window Height = 323
 Window Width = 517
-Window Z-Order = 3
+Window Z-Order = 2
 
 [File 0008]
-Path = "/g/CE7/Software/CE7_GTS2024/EPH5275_PNP.h"
+Path = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.h"
 File Type = "Include"
-Disk Date = 3808973626
+Disk Date = 3808974294
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 2
+Window Z-Order = 3
 Source Window State = "1,48,48,48,9,24,24,0,3,49,0,30,0,0,0,14,29,0,48,9,323,541,1,11,"
 
 [File 0009]
-Path = "/g/CE7/Software/CE7_GTS2024/ftd2xx_wp.h"
+Path = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/ftd2xx_wp.h"
 File Type = "Include"
 Disk Date = 3793921952
 In Projects = "1,"
@@ -138,15 +138,15 @@ Window Z-Order = 9
 Source Window State = "1,0,11,11,0,0,51,0,0,72,0,12,0,12,0,27,0,0,12,59,583,774,1,0,"
 
 [Tab Order]
-Tab 0001 = "/d/Program Files (x86)/National Instruments/CVI2017/include/userint.h"
-Tab 0002 = "/d/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdlib.h"
-Tab 0003 = "/d/Program Files (x86)/National Instruments/CVI2017/include/formatio.h"
-Tab 0004 = "/d/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
-Tab 0005 = "/g/CE7/Software/CE7_GTS2024/ftd2xx_wp.h"
-Tab 0006 = "/d/Program Files (x86)/National Instruments/CVI2017/include/ansi/string.h"
-Tab 0007 = "/g/CE7/Software/CE7_GTS2024/EPH5275_PNP.uir"
-Tab 0008 = "/g/CE7/Software/CE7_GTS2024/EPH5275_PNP.c"
-Tab 0009 = "/g/CE7/Software/CE7_GTS2024/EPH5275_PNP.h"
+Tab 0001 = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/ftd2xx_wp.h"
+Tab 0002 = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/string.h"
+Tab 0003 = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
+Tab 0004 = "/c/Program Files (x86)/National Instruments/CVI2017/include/formatio.h"
+Tab 0005 = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdlib.h"
+Tab 0006 = "/c/Program Files (x86)/National Instruments/CVI2017/include/userint.h"
+Tab 0007 = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.uir"
+Tab 0008 = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.c"
+Tab 0009 = "/c/Users/DELL2/Desktop/CE7/Software/CE7_GTS2024/EPH5275_PNP.h"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
