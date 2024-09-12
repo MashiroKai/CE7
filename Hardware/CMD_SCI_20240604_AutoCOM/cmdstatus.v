@@ -59,6 +59,7 @@ end
 /////PARAMETER
 localparam  PKGHEAD = 16'hEB90;
 localparam  HEAD = 8'hEB;
+localparam  HEAD1 = 8'hEA;
 localparam  FLAG = 8'h90;
 /////STATE MACHINE
 localparam ST0 = 8'b00000001;
@@ -79,7 +80,7 @@ always @(posedge clk or negedge rst_n) begin
     else begin
         case (STATE)
         ST0    :begin
-            if (wen&&din==HEAD) begin
+            if (wen&&(din==HEAD||din==HEAD1)) begin
                 STATE <= ST1;
             end
             else begin
@@ -87,7 +88,7 @@ always @(posedge clk or negedge rst_n) begin
             end
         end
         ST1     :begin
-            if (wen&&din==HEAD) begin
+            if (wen&&(din==HEAD||din==HEAD1)) begin
                 load <= 1'b1;
             end
             else begin
@@ -97,7 +98,7 @@ always @(posedge clk or negedge rst_n) begin
                 STATE <= ST3;
             end
             else begin
-                if (wen&&din==HEAD) begin
+                if (wen&&(din==HEAD||din==HEAD1)) begin
                     STATE <= STATE;
                 end
                 else begin
@@ -119,7 +120,7 @@ always @(posedge clk or negedge rst_n) begin
                 load    <= 1'b0;
             end
             else begin
-                if (wen&&din ==HEAD) begin
+                if (wen&&(din==HEAD||din==HEAD1)) begin
                     STATE <= ST6;
                     load <= 1'b0;
                 end
@@ -136,7 +137,7 @@ always @(posedge clk or negedge rst_n) begin
             STATE <= ST0;
         end
         ST6     :begin
-            if (wen&&din==HEAD||overtime) begin
+            if (wen&&(din==HEAD||din==HEAD1)||overtime) begin
                 load <= 1'b1;
             end
             else begin
@@ -146,7 +147,7 @@ always @(posedge clk or negedge rst_n) begin
                 STATE <= ST2;
             end
             else begin
-                if (wen&&din==HEAD) begin
+                if (wen&&(din==HEAD||din==HEAD1)) begin
                     STATE <= STATE;
                 end
                 else begin

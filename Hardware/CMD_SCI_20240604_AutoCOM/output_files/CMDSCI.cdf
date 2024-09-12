@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPCS128) Path("E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/") File("CMDSCI.pof") MfrSpec(OpMask(7) Child_OpMask(1 7));
+		Device PartName(EPCS128) Path("G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/") File("CMDSCI.pof") MfrSpec(OpMask(7) Child_OpMask(1 7));
 
 ChainEnd;
 

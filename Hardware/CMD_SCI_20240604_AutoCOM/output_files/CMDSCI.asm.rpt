@@ -1,5 +1,5 @@
 Assembler report for CMDSCI
-Wed Jun 05 20:48:19 2024
+Thu Sep 12 16:46:29 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,8 +10,8 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.sof
-  6. Assembler Device Options: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.pof
+  5. Assembler Device Options: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.sof
+  6. Assembler Device Options: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.pof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jun 05 20:48:19 2024 ;
+; Assembler Status      ; Successful - Thu Sep 12 16:46:29 2024 ;
 ; Revision Name         ; CMDSCI                                ;
 ; Top-level Entity Name ; CMDSCI                                ;
 ; Family                ; Cyclone V                             ;
@@ -59,28 +59,28 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+
 ; File Name                                                        ;
 +------------------------------------------------------------------+
-; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.sof ;
-; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.pof ;
+; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.sof ;
+; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.pof ;
 +------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.sof ;
+; Assembler Device Options: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.sof ;
 +----------------+---------------------------------------------------------------------------+
 ; Option         ; Setting                                                                   ;
 +----------------+---------------------------------------------------------------------------+
-; JTAG usercode  ; 0x07876F9C                                                                ;
-; Checksum       ; 0x07876F9C                                                                ;
+; JTAG usercode  ; 0x07877CCD                                                                ;
+; Checksum       ; 0x07877CCD                                                                ;
 +----------------+---------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.pof ;
+; Assembler Device Options: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.pof ;
 +--------------------+-----------------------------------------------------------------------+
 ; Option             ; Setting                                                               ;
 +--------------------+-----------------------------------------------------------------------+
 ; JTAG usercode      ; 0x00000000                                                            ;
-; Checksum           ; 0xC4BB09BC                                                            ;
+; Checksum           ; 0xC5264104                                                            ;
 ; Compression Ratio  ; 2                                                                     ;
 +--------------------+-----------------------------------------------------------------------+
 
@@ -91,14 +91,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 05 20:47:33 2024
+    Info: Processing started: Thu Sep 12 16:46:08 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off CMDSCI -c CMDSCI
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4963 megabytes
-    Info: Processing ended: Wed Jun 05 20:48:20 2024
-    Info: Elapsed time: 00:00:47
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4959 megabytes
+    Info: Processing ended: Thu Sep 12 16:46:29 2024
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:19
 
 

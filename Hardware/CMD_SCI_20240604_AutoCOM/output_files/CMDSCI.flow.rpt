@@ -1,5 +1,5 @@
 Flow report for CMDSCI
-Wed Jun 05 20:49:01 2024
+Thu Sep 12 16:46:47 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Jun 05 20:48:19 2024       ;
+; Flow Status                     ; Successful - Thu Sep 12 16:46:29 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; CMDSCI                                      ;
 ; Top-level Entity Name           ; CMDSCI                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEFA9F23I7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 5,031 / 113,560 ( 4 % )                     ;
-; Total registers                 ; 5231                                        ;
+; Logic utilization (in ALMs)     ; 4,885 / 113,560 ( 4 % )                     ;
+; Total registers                 ; 5249                                        ;
 ; Total pins                      ; 31 / 224 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,107,424 / 12,492,800 ( 17 % )             ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/05/2024 20:43:37 ;
+; Start date & time ; 09/12/2024 16:42:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CMDSCI              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 27214208348980.171759141725196         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 202883596358622.172613057109280        ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                    ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --         ;
@@ -111,11 +111,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 2.1                     ; 4997 MB             ; 00:00:15                           ;
-; Fitter               ; 00:02:49     ; 1.4                     ; 8053 MB             ; 00:06:56                           ;
-; Assembler            ; 00:00:46     ; 1.0                     ; 4963 MB             ; 00:00:12                           ;
-; Timing Analyzer      ; 00:00:40     ; 2.0                     ; 5609 MB             ; 00:00:40                           ;
-; Total                ; 00:04:35     ; --                      ; --                  ; 00:08:03                           ;
+; Analysis & Synthesis ; 00:00:19     ; 2.0                     ; 4958 MB             ; 00:00:34                           ;
+; Fitter               ; 00:02:52     ; 1.2                     ; 7447 MB             ; 00:11:09                           ;
+; Assembler            ; 00:00:21     ; 1.0                     ; 4959 MB             ; 00:00:19                           ;
+; Timing Analyzer      ; 00:00:17     ; 3.1                     ; 5543 MB             ; 00:00:48                           ;
+; Total                ; 00:03:49     ; --                      ; --                  ; 00:12:50                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,10 +124,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; KAI              ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; KAI              ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; KAI              ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; KAI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DELL             ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DELL             ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DELL             ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DELL             ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

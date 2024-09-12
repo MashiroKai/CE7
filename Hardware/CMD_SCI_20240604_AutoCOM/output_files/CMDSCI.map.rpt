@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CMDSCI
-Wed Jun 05 20:44:03 2024
+Thu Sep 12 16:43:11 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -136,7 +136,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun 05 20:44:00 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 12 16:43:11 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; CMDSCI                                      ;
 ; Top-level Entity Name           ; CMDSCI                                      ;
@@ -249,22 +249,18 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.11        ;
-; Maximum used               ; 12          ;
+; Average used               ; 2.00        ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  24.6%      ;
-;     Processor 3            ;  24.6%      ;
-;     Processor 4            ;  24.6%      ;
-;     Processor 5            ;  24.6%      ;
-;     Processor 6            ;  12.8%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processor 9            ;   0.0%      ;
-;     Processors 10-12       ;   0.0%      ;
+;     Processor 2            ;  25.9%      ;
+;     Processor 3            ;  24.2%      ;
+;     Processor 4            ;  24.2%      ;
+;     Processor 5            ;  17.1%      ;
+;     Processor 6            ;   8.7%      ;
 +----------------------------+-------------+
 
 
@@ -273,86 +269,86 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+----------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                 ; Library  ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+----------+
-; autorecognize/AutoRecognize.v    ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/autorecognize/AutoRecognize.v       ;          ;
-; RS422_20240114/UART/UART_TX.v    ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TX.v       ;          ;
-; RS422_20240114/UART/UART_RX.v    ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_RX.v       ;          ;
-; RS422_20240114/UART/UART.v       ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v          ;          ;
-; RS422_20240114/UART/Baud_tx.v    ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/Baud_tx.v       ;          ;
-; RS422_20240114/UART/Baud_rx.v    ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/Baud_rx.v       ;          ;
-; RS422_20240114/Uart_rst_n.v      ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/Uart_rst_n.v         ;          ;
-; RS422_20240114/timingctrl.v      ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v         ;          ;
-; RS422_20240114/sttxctrl.v        ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/sttxctrl.v           ;          ;
-; RS422_20240114/reply.v           ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v              ;          ;
-; RS422_20240114/fifo.v            ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v               ;          ;
-; RS422_20240114/counter_32b.v     ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter_32b.v        ;          ;
-; RS422_20240114/counter.v         ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v            ;          ;
-; RS422_20240114/cmdtxctrl.v       ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdtxctrl.v          ;          ;
-; RS422_20240114/cmdfifo.v         ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v            ;          ;
-; SCI/valid_data.v                 ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/valid_data.v                    ;          ;
-; SCI/rx_stop.v                    ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/rx_stop.v                       ;          ;
-; SCI/decoder.v                    ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/decoder.v                       ;          ;
-; ASYNC/FIFO2Usb_Asyn.v            ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v               ;          ;
-; PLL12.v                          ; yes             ; User Wizard-Generated File         ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12.v                             ; PLL12    ;
-; PLL12/PLL12_0002.v               ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v                  ; PLL12    ;
-; CMDSCI.bdf                       ; yes             ; User Block Diagram/Schematic File  ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CMDSCI.bdf                          ;          ;
-; sttype.v                         ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sttype.v                            ;          ;
-; strxctrl.v                       ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v                          ;          ;
-; fifoarray.v                      ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v                         ;          ;
-; PLL80_30.v                       ; yes             ; User Wizard-Generated File         ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30.v                          ; PLL80_30 ;
-; PLL80_30/PLL80_30_0002.v         ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v            ; PLL80_30 ;
-; CDC.v                            ; yes             ; User Wizard-Generated File         ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v                               ;          ;
-; cmdstatus.v                      ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v                         ;          ;
-; pulsed_reg.v                     ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/pulsed_reg.v                        ;          ;
-; Uart_config.v                    ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Uart_config.v                       ;          ;
-; sync1.v                          ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync1.v                             ;          ;
-; Send_interval.v                  ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Send_interval.v                     ;          ;
-; sync.v                           ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync.v                              ;          ;
-; Baud_tx_slave.v                  ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Baud_tx_slave.v                     ;          ;
-; output_files/8or.v               ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/8or.v                  ;          ;
-; mux8.v                           ; yes             ; User Verilog HDL File              ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/mux8.v                              ;          ;
-; altera_pll.v                     ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v          ;          ;
-; dcfifo.tdf                       ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf            ;          ;
-; lpm_counter.inc                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc       ;          ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;          ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;          ;
-; a_graycounter.inc                ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_graycounter.inc     ;          ;
-; a_fefifo.inc                     ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_fefifo.inc          ;          ;
-; a_gray2bin.inc                   ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_gray2bin.inc        ;          ;
-; dffpipe.inc                      ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc           ;          ;
-; alt_sync_fifo.inc                ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_sync_fifo.inc     ;          ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc       ;          ;
-; altsyncram_fifo.inc              ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram_fifo.inc   ;          ;
-; aglobal201.inc                   ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;          ;
-; db/dcfifo_5ok1.tdf               ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf                  ;          ;
-; db/a_graycounter_7g6.tdf         ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/a_graycounter_7g6.tdf            ;          ;
-; db/a_graycounter_3ub.tdf         ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/a_graycounter_3ub.tdf            ;          ;
-; db/altsyncram_8fa1.tdf           ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_8fa1.tdf              ;          ;
-; db/alt_synch_pipe_b9l.tdf        ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_b9l.tdf           ;          ;
-; db/dffpipe_su8.tdf               ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dffpipe_su8.tdf                  ;          ;
-; db/alt_synch_pipe_c9l.tdf        ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_c9l.tdf           ;          ;
-; db/dffpipe_tu8.tdf               ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dffpipe_tu8.tdf                  ;          ;
-; db/cmpr_qu5.tdf                  ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/cmpr_qu5.tdf                     ;          ;
-; db/cmpr_pu5.tdf                  ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/cmpr_pu5.tdf                     ;          ;
-; db/mux_5r7.tdf                   ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/mux_5r7.tdf                      ;          ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;          ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;          ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;          ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;          ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;          ;
-; altrom.inc                       ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;          ;
-; altram.inc                       ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;          ;
-; db/altsyncram_ick1.tdf           ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_ick1.tdf              ;          ;
-; db/decode_tma.tdf                ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/decode_tma.tdf                   ;          ;
-; db/mux_dhb.tdf                   ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/mux_dhb.tdf                      ;          ;
-; db/altsyncram_7oo1.tdf           ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_7oo1.tdf              ;          ;
-; db/altsyncram_3vo1.tdf           ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_3vo1.tdf              ;          ;
-; db/altsyncram_1jo1.tdf           ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_1jo1.tdf              ;          ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;          ;
-; abs_divider.inc                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;          ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;          ;
-; db/lpm_divide_4dm.tdf            ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/lpm_divide_4dm.tdf               ;          ;
-; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/sign_div_unsign_9nh.tdf          ;          ;
-; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction        ; E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_u_div_o2f.tdf                ;          ;
+; autorecognize/AutoRecognize.v    ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/autorecognize/AutoRecognize.v       ;          ;
+; RS422_20240114/UART/UART_TX.v    ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TX.v       ;          ;
+; RS422_20240114/UART/UART_RX.v    ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_RX.v       ;          ;
+; RS422_20240114/UART/UART.v       ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v          ;          ;
+; RS422_20240114/UART/Baud_tx.v    ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/Baud_tx.v       ;          ;
+; RS422_20240114/UART/Baud_rx.v    ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/Baud_rx.v       ;          ;
+; RS422_20240114/Uart_rst_n.v      ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/Uart_rst_n.v         ;          ;
+; RS422_20240114/timingctrl.v      ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v         ;          ;
+; RS422_20240114/sttxctrl.v        ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/sttxctrl.v           ;          ;
+; RS422_20240114/reply.v           ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v              ;          ;
+; RS422_20240114/fifo.v            ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v               ;          ;
+; RS422_20240114/counter_32b.v     ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter_32b.v        ;          ;
+; RS422_20240114/counter.v         ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v            ;          ;
+; RS422_20240114/cmdtxctrl.v       ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdtxctrl.v          ;          ;
+; RS422_20240114/cmdfifo.v         ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v            ;          ;
+; SCI/valid_data.v                 ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/valid_data.v                    ;          ;
+; SCI/rx_stop.v                    ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/rx_stop.v                       ;          ;
+; SCI/decoder.v                    ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/decoder.v                       ;          ;
+; ASYNC/FIFO2Usb_Asyn.v            ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v               ;          ;
+; PLL12.v                          ; yes             ; User Wizard-Generated File         ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12.v                             ; PLL12    ;
+; PLL12/PLL12_0002.v               ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v                  ; PLL12    ;
+; CMDSCI.bdf                       ; yes             ; User Block Diagram/Schematic File  ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CMDSCI.bdf                          ;          ;
+; sttype.v                         ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sttype.v                            ;          ;
+; strxctrl.v                       ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v                          ;          ;
+; fifoarray.v                      ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v                         ;          ;
+; PLL80_30.v                       ; yes             ; User Wizard-Generated File         ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30.v                          ; PLL80_30 ;
+; PLL80_30/PLL80_30_0002.v         ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v            ; PLL80_30 ;
+; CDC.v                            ; yes             ; User Wizard-Generated File         ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v                               ;          ;
+; cmdstatus.v                      ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v                         ;          ;
+; pulsed_reg.v                     ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/pulsed_reg.v                        ;          ;
+; Uart_config.v                    ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Uart_config.v                       ;          ;
+; sync1.v                          ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync1.v                             ;          ;
+; Send_interval.v                  ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Send_interval.v                     ;          ;
+; sync.v                           ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync.v                              ;          ;
+; Baud_tx_slave.v                  ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Baud_tx_slave.v                     ;          ;
+; output_files/8or.v               ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/8or.v                  ;          ;
+; mux8.v                           ; yes             ; User Verilog HDL File              ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/mux8.v                              ;          ;
+; altera_pll.v                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v          ;          ;
+; dcfifo.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf            ;          ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc       ;          ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;          ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;          ;
+; a_graycounter.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_graycounter.inc     ;          ;
+; a_fefifo.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_fefifo.inc          ;          ;
+; a_gray2bin.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_gray2bin.inc        ;          ;
+; dffpipe.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc           ;          ;
+; alt_sync_fifo.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_sync_fifo.inc     ;          ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc       ;          ;
+; altsyncram_fifo.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram_fifo.inc   ;          ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;          ;
+; db/dcfifo_5ok1.tdf               ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf                  ;          ;
+; db/a_graycounter_7g6.tdf         ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/a_graycounter_7g6.tdf            ;          ;
+; db/a_graycounter_3ub.tdf         ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/a_graycounter_3ub.tdf            ;          ;
+; db/altsyncram_8fa1.tdf           ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_8fa1.tdf              ;          ;
+; db/alt_synch_pipe_b9l.tdf        ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_b9l.tdf           ;          ;
+; db/dffpipe_su8.tdf               ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dffpipe_su8.tdf                  ;          ;
+; db/alt_synch_pipe_c9l.tdf        ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_c9l.tdf           ;          ;
+; db/dffpipe_tu8.tdf               ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dffpipe_tu8.tdf                  ;          ;
+; db/cmpr_qu5.tdf                  ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/cmpr_qu5.tdf                     ;          ;
+; db/cmpr_pu5.tdf                  ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/cmpr_pu5.tdf                     ;          ;
+; db/mux_5r7.tdf                   ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/mux_5r7.tdf                      ;          ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;          ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;          ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;          ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;          ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;          ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;          ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;          ;
+; db/altsyncram_ick1.tdf           ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_ick1.tdf              ;          ;
+; db/decode_tma.tdf                ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/decode_tma.tdf                   ;          ;
+; db/mux_dhb.tdf                   ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/mux_dhb.tdf                      ;          ;
+; db/altsyncram_7oo1.tdf           ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_7oo1.tdf              ;          ;
+; db/altsyncram_3vo1.tdf           ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_3vo1.tdf              ;          ;
+; db/altsyncram_1jo1.tdf           ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_1jo1.tdf              ;          ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;          ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;          ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;          ;
+; db/lpm_divide_4dm.tdf            ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/lpm_divide_4dm.tdf               ;          ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/sign_div_unsign_9nh.tdf          ;          ;
+; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction        ; G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_u_div_o2f.tdf                ;          ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+----------+
 
 
@@ -366,8 +362,8 @@ https://fpgasoftware.intel.com/eula.
 ; Combinational ALUT usage for logic          ; 4581                                                                     ;
 ;     -- 7 input functions                    ; 16                                                                       ;
 ;     -- 6 input functions                    ; 1624                                                                     ;
-;     -- 5 input functions                    ; 1192                                                                     ;
-;     -- 4 input functions                    ; 564                                                                      ;
+;     -- 5 input functions                    ; 1191                                                                     ;
+;     -- 4 input functions                    ; 565                                                                      ;
 ;     -- <=3 input functions                  ; 1185                                                                     ;
 ;                                             ;                                                                          ;
 ; Dedicated logic registers                   ; 5147                                                                     ;
@@ -383,7 +379,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                          ;
 ; Maximum fan-out node                        ; PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 5056                                                                     ;
-; Total fan-out                               ; 53367                                                                    ;
+; Total fan-out                               ; 53366                                                                    ;
 ; Average fan-out                             ; 5.30                                                                     ;
 +---------------------------------------------+--------------------------------------------------------------------------+
 
@@ -2957,8 +2953,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         1 data inputs ; 17                          ;
 ;         2 data inputs ; 608                         ;
 ;         3 data inputs ; 111                         ;
-;         4 data inputs ; 552                         ;
-;         5 data inputs ; 710                         ;
+;         4 data inputs ; 553                         ;
+;         5 data inputs ; 709                         ;
 ;         6 data inputs ; 1624                        ;
 ;     shared            ; 29                          ;
 ;         2 data inputs ; 29                          ;
@@ -2976,7 +2972,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:10     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -2986,181 +2982,181 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 05 20:43:36 2024
+    Info: Processing started: Thu Sep 12 16:42:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CMDSCI -c CMDSCI
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file autorecognize/autorecognize.v
-    Info (12023): Found entity 1: AutoRecognize File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/autorecognize/AutoRecognize.v Line: 1
+    Info (12023): Found entity 1: AutoRecognize File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/autorecognize/AutoRecognize.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/uart/uart_tx.v
-    Info (12023): Found entity 1: Uart_Tx File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TX.v Line: 13
+    Info (12023): Found entity 1: Uart_Tx File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TX.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/uart/uart_tb.v
-    Info (12023): Found entity 1: UART_TB File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 2
+    Info (12023): Found entity 1: UART_TB File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/uart/uart_rx.v
-    Info (12023): Found entity 1: Uart_Rx File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_RX.v Line: 15
+    Info (12023): Found entity 1: Uart_Rx File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_RX.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/uart/uart.v
-    Info (12023): Found entity 1: UART File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 38
+    Info (12023): Found entity 1: UART File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 38
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/uart/baud_tx.v
-    Info (12023): Found entity 1: Baud_tx File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/Baud_tx.v Line: 14
+    Info (12023): Found entity 1: Baud_tx File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/Baud_tx.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/uart/baud_rx.v
-    Info (12023): Found entity 1: Baud_rx File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/Baud_rx.v Line: 14
+    Info (12023): Found entity 1: Baud_rx File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/Baud_rx.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/uart_rst_n.v
-    Info (12023): Found entity 1: Uart_rst_n File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/Uart_rst_n.v Line: 11
+    Info (12023): Found entity 1: Uart_rst_n File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/Uart_rst_n.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/timingctrl.v
-    Info (12023): Found entity 1: timingctrl File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 12
+    Info (12023): Found entity 1: timingctrl File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/sttxctrl.v
-    Info (12023): Found entity 1: sttxctrl File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/sttxctrl.v Line: 1
+    Info (12023): Found entity 1: sttxctrl File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/sttxctrl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/reply.v
-    Info (12023): Found entity 1: reply File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v Line: 11
+    Info (12023): Found entity 1: reply File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/pulsed.v
-    Info (12023): Found entity 1: pulsed File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/pulsed.v Line: 1
+    Info (12023): Found entity 1: pulsed File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/pulsed.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/mux5to1.v
-    Info (12023): Found entity 1: mux5to1 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/mux5to1.v Line: 1
+    Info (12023): Found entity 1: mux5to1 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/mux5to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/mux1to5.v
-    Info (12023): Found entity 1: mux1to5 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/mux1to5.v Line: 2
+    Info (12023): Found entity 1: mux1to5 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/mux1to5.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/fifo.v
-    Info (12023): Found entity 1: fifo File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 19
+    Info (12023): Found entity 1: fifo File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/counter_32b.v
-    Info (12023): Found entity 1: counter_32b File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter_32b.v Line: 18
+    Info (12023): Found entity 1: counter_32b File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter_32b.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/counter.v
-    Info (12023): Found entity 1: counter File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 19
+    Info (12023): Found entity 1: counter File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/cmdtype.v
-    Info (12023): Found entity 1: cmdtype File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdtype.v Line: 1
+    Info (12023): Found entity 1: cmdtype File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdtype.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/cmdtxctrl.v
-    Info (12023): Found entity 1: cmdtxctrl File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdtxctrl.v Line: 14
+    Info (12023): Found entity 1: cmdtxctrl File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdtxctrl.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/cmdrxctrl.v
-    Info (12023): Found entity 1: cmdrxctrl File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdrxctrl.v Line: 18
+    Info (12023): Found entity 1: cmdrxctrl File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdrxctrl.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/cmdlength.v
-    Info (12023): Found entity 1: cmdlength File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdlength.v Line: 1
+    Info (12023): Found entity 1: cmdlength File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdlength.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rs422_20240114/cmdfifo.v
-    Info (12023): Found entity 1: cmdfifo File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v Line: 25
+    Info (12023): Found entity 1: cmdfifo File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file sci/valid_data.v
-    Info (12023): Found entity 1: valid_data File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/valid_data.v Line: 1
+    Info (12023): Found entity 1: valid_data File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/valid_data.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sci/upload.v
-    Info (12023): Found entity 1: upload File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/upload.v Line: 1
+    Info (12023): Found entity 1: upload File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/upload.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sci/rx_stop.v
-    Info (12023): Found entity 1: rx_stop File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/rx_stop.v Line: 1
+    Info (12023): Found entity 1: rx_stop File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/rx_stop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sci/decoder.v
-    Info (12023): Found entity 1: decoder_8b10b File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/decoder.v Line: 36
+    Info (12023): Found entity 1: decoder_8b10b File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/decoder.v Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file async/fifo2usb_asyn.v
-    Info (12023): Found entity 1: FIFO2Usb_Asyn File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 33
+    Info (12023): Found entity 1: FIFO2Usb_Asyn File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file pll12.v
-    Info (12023): Found entity 1: PLL12 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12.v Line: 8
+    Info (12023): Found entity 1: PLL12 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll12/pll12_0002.v
-    Info (12023): Found entity 1: PLL12_0002 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v Line: 2
+    Info (12023): Found entity 1: PLL12_0002 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file cmdsci.bdf
     Info (12023): Found entity 1: CMDSCI
 Info (12021): Found 1 design units, including 1 entities, in source file sttype.v
-    Info (12023): Found entity 1: sttype File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sttype.v Line: 11
+    Info (12023): Found entity 1: sttype File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sttype.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file strxctrl.v
-    Info (12023): Found entity 1: strxctrl File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v Line: 18
-Warning (12018): Entity "or5" will be ignored because it conflicts with Quartus Prime primitive name File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/or5.v Line: 1
+    Info (12023): Found entity 1: strxctrl File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v Line: 18
+Warning (12018): Entity "or5" will be ignored because it conflicts with Quartus Prime primitive name File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/or5.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file or5.v
 Info (12021): Found 1 design units, including 1 entities, in source file fifoarray.v
-    Info (12023): Found entity 1: fifiarray File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 1
+    Info (12023): Found entity 1: fifiarray File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll80_30.v
-    Info (12023): Found entity 1: PLL80_30 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30.v Line: 8
+    Info (12023): Found entity 1: PLL80_30 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll80_30/pll80_30_0002.v
-    Info (12023): Found entity 1: PLL80_30_0002 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v Line: 2
+    Info (12023): Found entity 1: PLL80_30_0002 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file cdc.v
-    Info (12023): Found entity 1: CDC File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v Line: 40
+    Info (12023): Found entity 1: CDC File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file cmdstatus.v
-    Info (12023): Found entity 1: cmdstatus File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 17
+    Info (12023): Found entity 1: cmdstatus File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file pulsed_reg.v
-    Info (12023): Found entity 1: pulsed_reg File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/pulsed_reg.v Line: 14
+    Info (12023): Found entity 1: pulsed_reg File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/pulsed_reg.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file uart_config.v
-    Info (12023): Found entity 1: Uart_config File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Uart_config.v Line: 14
+    Info (12023): Found entity 1: Uart_config File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Uart_config.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file sync1.v
-    Info (12023): Found entity 1: sync1 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync1.v Line: 1
+    Info (12023): Found entity 1: sync1 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/cmdsci.v
-    Info (12023): Found entity 1: Uart_interval File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.v Line: 13
+    Info (12023): Found entity 1: Uart_interval File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file send_interval.v
-    Info (12023): Found entity 1: Send_interval File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Send_interval.v Line: 13
+    Info (12023): Found entity 1: Send_interval File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Send_interval.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file sync.v
-    Info (12023): Found entity 1: sync File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync.v Line: 15
+    Info (12023): Found entity 1: sync File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file baud_tx_slave.v
-    Info (12023): Found entity 1: Baud_tx_slave File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Baud_tx_slave.v Line: 15
+    Info (12023): Found entity 1: Baud_tx_slave File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Baud_tx_slave.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/8or.v
-    Info (12023): Found entity 1: or16to8 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/8or.v Line: 1
+    Info (12023): Found entity 1: or16to8 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/8or.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux8.v
-    Info (12023): Found entity 1: mux8 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/mux8.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(29): created implicit net for "bps_en_tx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 29
-Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(30): created implicit net for "bps_clk_tx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 30
-Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(39): created implicit net for "rs422_rx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(50): created implicit net for "bps_en_rx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(51): created implicit net for "bps_clk_rx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 51
-Warning (10236): Verilog HDL Implicit Net warning at timingctrl.v(26): created implicit net for "send_done" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at timingctrl.v(140): created implicit net for "overtime" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 140
-Warning (10236): Verilog HDL Implicit Net warning at timingctrl.v(151): created implicit net for "waittime" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 151
-Warning (10236): Verilog HDL Implicit Net warning at FIFO2Usb_Asyn.v(164): created implicit net for "OVERTIME" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 164
-Warning (10236): Verilog HDL Implicit Net warning at strxctrl.v(36): created implicit net for "reply_pos" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(22): created implicit net for "full_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(23): created implicit net for "rx_done_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(24): created implicit net for "wen_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(25): created implicit net for "din_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(26): created implicit net for "full_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(27): created implicit net for "rx_done_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 27
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(28): created implicit net for "wen_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 28
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(29): created implicit net for "din_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 29
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(30): created implicit net for "full_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 30
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(31): created implicit net for "rx_done_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 31
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(32): created implicit net for "wen_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 32
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(33): created implicit net for "din_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(34): created implicit net for "full_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 34
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(35): created implicit net for "rx_done_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 35
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(36): created implicit net for "wen_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(37): created implicit net for "din_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(38): created implicit net for "full_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 38
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(39): created implicit net for "rx_done_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(40): created implicit net for "wen_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(41): created implicit net for "din_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 41
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(55): created implicit net for "ren_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 55
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(56): created implicit net for "valid_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 56
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(57): created implicit net for "dout_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 57
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(58): created implicit net for "empty_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 58
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(60): created implicit net for "tx_done_tc" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(75): created implicit net for "ren_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 75
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(76): created implicit net for "valid_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 76
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(77): created implicit net for "dout_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 77
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(78): created implicit net for "empty_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 78
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(80): created implicit net for "tx_done_hk" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 80
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(95): created implicit net for "ren_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 95
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(96): created implicit net for "valid_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 96
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(97): created implicit net for "dout_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 97
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(98): created implicit net for "empty_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 98
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(100): created implicit net for "tx_done_sd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 100
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(115): created implicit net for "ren_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 115
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(116): created implicit net for "valid_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 116
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(117): created implicit net for "dout_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 117
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(118): created implicit net for "empty_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 118
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(120): created implicit net for "tx_done_di" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 120
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(135): created implicit net for "ren_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 135
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(136): created implicit net for "valid_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 136
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(137): created implicit net for "dout_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 137
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(138): created implicit net for "empty_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 138
-Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(140): created implicit net for "tx_done_pf" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 140
-Warning (10236): Verilog HDL Implicit Net warning at cmdstatus.v(228): created implicit net for "overtime" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 228
-Warning (10236): Verilog HDL Implicit Net warning at cmdstatus.v(238): created implicit net for "ovetime_r" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 238
+    Info (12023): Found entity 1: mux8 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/mux8.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(29): created implicit net for "bps_en_tx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(30): created implicit net for "bps_clk_tx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(39): created implicit net for "rs422_rx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(50): created implicit net for "bps_en_rx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at UART_TB.v(51): created implicit net for "bps_clk_rx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TB.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at timingctrl.v(26): created implicit net for "send_done" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at timingctrl.v(140): created implicit net for "overtime" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 140
+Warning (10236): Verilog HDL Implicit Net warning at timingctrl.v(151): created implicit net for "waittime" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 151
+Warning (10236): Verilog HDL Implicit Net warning at FIFO2Usb_Asyn.v(164): created implicit net for "OVERTIME" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 164
+Warning (10236): Verilog HDL Implicit Net warning at strxctrl.v(36): created implicit net for "reply_pos" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(22): created implicit net for "full_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(23): created implicit net for "rx_done_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(24): created implicit net for "wen_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(25): created implicit net for "din_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(26): created implicit net for "full_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(27): created implicit net for "rx_done_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(28): created implicit net for "wen_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(29): created implicit net for "din_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(30): created implicit net for "full_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(31): created implicit net for "rx_done_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(32): created implicit net for "wen_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(33): created implicit net for "din_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(34): created implicit net for "full_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(35): created implicit net for "rx_done_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(36): created implicit net for "wen_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(37): created implicit net for "din_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(38): created implicit net for "full_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(39): created implicit net for "rx_done_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(40): created implicit net for "wen_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(41): created implicit net for "din_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 41
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(55): created implicit net for "ren_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(56): created implicit net for "valid_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 56
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(57): created implicit net for "dout_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(58): created implicit net for "empty_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(60): created implicit net for "tx_done_tc" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(75): created implicit net for "ren_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 75
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(76): created implicit net for "valid_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 76
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(77): created implicit net for "dout_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 77
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(78): created implicit net for "empty_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(80): created implicit net for "tx_done_hk" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 80
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(95): created implicit net for "ren_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 95
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(96): created implicit net for "valid_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 96
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(97): created implicit net for "dout_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 97
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(98): created implicit net for "empty_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 98
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(100): created implicit net for "tx_done_sd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 100
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(115): created implicit net for "ren_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 115
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(116): created implicit net for "valid_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 116
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(117): created implicit net for "dout_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 117
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(118): created implicit net for "empty_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 118
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(120): created implicit net for "tx_done_di" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(135): created implicit net for "ren_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 135
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(136): created implicit net for "valid_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 136
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(137): created implicit net for "dout_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 137
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(138): created implicit net for "empty_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at fifoarray.v(140): created implicit net for "tx_done_pf" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/fifoarray.v Line: 140
+Warning (10236): Verilog HDL Implicit Net warning at cmdstatus.v(229): created implicit net for "overtime" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 229
+Warning (10236): Verilog HDL Implicit Net warning at cmdstatus.v(239): created implicit net for "ovetime_r" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 239
 Info (12127): Elaborating entity "CMDSCI" for the top level hierarchy
 Warning (275011): Block or symbol "fifo" of instance "inst30" overlaps another block or symbol
 Warning (275011): Block or symbol "OR2" of instance "inst38" overlaps another block or symbol
 Warning (275011): Block or symbol "mux8" of instance "inst19" overlaps another block or symbol
 Warning (275043): Pin "pin_name1" is missing source
 Info (12128): Elaborating entity "UART" for hierarchy "UART:inst10"
-Info (12128): Elaborating entity "Baud_rx" for hierarchy "UART:inst10|Baud_rx:m_baud_rx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 88
-Info (12128): Elaborating entity "Uart_Rx" for hierarchy "UART:inst10|Uart_Rx:m_rx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 103
-Info (12128): Elaborating entity "Baud_tx" for hierarchy "UART:inst10|Baud_tx:m_baud_tx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 113
-Info (12128): Elaborating entity "Uart_Tx" for hierarchy "UART:inst10|Uart_Tx:m_tx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 128
-Warning (10240): Verilog HDL Always Construct warning at UART_TX.v(46): inferring latch(es) for variable "ready", which holds its previous value in one or more paths through the always construct File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TX.v Line: 46
-Info (10041): Inferred latch for "ready" at UART_TX.v(49) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TX.v Line: 49
-Info (12128): Elaborating entity "Baud_rx" for hierarchy "UART:inst10|Baud_rx:s_baud_rx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 141
-Info (12128): Elaborating entity "Baud_tx_slave" for hierarchy "UART:inst10|Baud_tx_slave:s_baud_tx" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 164
+Info (12128): Elaborating entity "Baud_rx" for hierarchy "UART:inst10|Baud_rx:m_baud_rx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 88
+Info (12128): Elaborating entity "Uart_Rx" for hierarchy "UART:inst10|Uart_Rx:m_rx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 103
+Info (12128): Elaborating entity "Baud_tx" for hierarchy "UART:inst10|Baud_tx:m_baud_tx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 113
+Info (12128): Elaborating entity "Uart_Tx" for hierarchy "UART:inst10|Uart_Tx:m_tx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 128
+Warning (10240): Verilog HDL Always Construct warning at UART_TX.v(46): inferring latch(es) for variable "ready", which holds its previous value in one or more paths through the always construct File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TX.v Line: 46
+Info (10041): Inferred latch for "ready" at UART_TX.v(49) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART_TX.v Line: 49
+Info (12128): Elaborating entity "Baud_rx" for hierarchy "UART:inst10|Baud_rx:s_baud_rx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 141
+Info (12128): Elaborating entity "Baud_tx_slave" for hierarchy "UART:inst10|Baud_tx_slave:s_baud_tx" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 164
 Info (12128): Elaborating entity "PLL12" for hierarchy "PLL12:inst1"
-Info (12128): Elaborating entity "PLL12_0002" for hierarchy "PLL12:inst1|PLL12_0002:pll12_inst" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12.v Line: 20
-Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v Line: 85
+Info (12128): Elaborating entity "PLL12_0002" for hierarchy "PLL12:inst1|PLL12_0002:pll12_inst" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12.v Line: 20
+Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v Line: 85
-Info (12133): Instantiated megafunction "PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i" with the following parameter: File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v Line: 85
+Info (12133): Instantiated megafunction "PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i" with the following parameter: File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL12/PLL12_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "12.0 MHz"
     Info (12134): Parameter "operation_mode" = "normal"
@@ -3222,62 +3218,62 @@ Info (12133): Instantiated megafunction "PLL12:inst1|PLL12_0002:pll12_inst|alter
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "Uart_rst_n" for hierarchy "Uart_rst_n:inst"
-Warning (10762): Verilog HDL Case Statement warning at Uart_rst_n.v(40): can't check case statement for completeness because the case expression has too many possible states File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/Uart_rst_n.v Line: 40
-Info (12128): Elaborating entity "pulsed_reg" for hierarchy "Uart_rst_n:inst|pulsed_reg:p1" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/Uart_rst_n.v Line: 56
+Warning (10762): Verilog HDL Case Statement warning at Uart_rst_n.v(40): can't check case statement for completeness because the case expression has too many possible states File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/Uart_rst_n.v Line: 40
+Info (12128): Elaborating entity "pulsed_reg" for hierarchy "Uart_rst_n:inst|pulsed_reg:p1" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/Uart_rst_n.v Line: 56
 Info (12128): Elaborating entity "Uart_config" for hierarchy "Uart_config:inst4"
-Warning (10762): Verilog HDL Case Statement warning at Uart_config.v(46): can't check case statement for completeness because the case expression has too many possible states File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Uart_config.v Line: 46
+Warning (10762): Verilog HDL Case Statement warning at Uart_config.v(46): can't check case statement for completeness because the case expression has too many possible states File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Uart_config.v Line: 46
 Info (12128): Elaborating entity "fifo" for hierarchy "fifo:inst30"
-Warning (10230): Verilog HDL assignment warning at fifo.v(81): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 81
+Warning (10230): Verilog HDL assignment warning at fifo.v(81): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 81
 Info (12128): Elaborating entity "strxctrl" for hierarchy "strxctrl:inst14"
-Warning (10230): Verilog HDL assignment warning at strxctrl.v(164): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v Line: 164
-Info (12128): Elaborating entity "counter" for hierarchy "strxctrl:inst14|counter:wrsthead_cnt" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v Line: 158
-Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (3) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
-Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (3) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
-Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (3) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
+Warning (10230): Verilog HDL assignment warning at strxctrl.v(164): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v Line: 164
+Info (12128): Elaborating entity "counter" for hierarchy "strxctrl:inst14|counter:wrsthead_cnt" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/strxctrl.v Line: 158
+Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (3) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (3) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
+Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (3) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
 Info (12128): Elaborating entity "reply" for hierarchy "reply:inst16"
-Info (12128): Elaborating entity "counter" for hierarchy "reply:inst16|counter:eng_cnt" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v Line: 137
-Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (10) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
-Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (10) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
-Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (10) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
-Info (12128): Elaborating entity "counter" for hierarchy "reply:inst16|counter:waitreply_cnt" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v Line: 148
-Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
-Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
-Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
-Info (12128): Elaborating entity "counter" for hierarchy "reply:inst16|counter:overtime_cnt" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v Line: 159
-Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (15) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
-Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (15) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
-Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (15) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
+Info (12128): Elaborating entity "counter" for hierarchy "reply:inst16|counter:eng_cnt" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v Line: 137
+Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (10) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (10) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
+Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (10) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
+Info (12128): Elaborating entity "counter" for hierarchy "reply:inst16|counter:waitreply_cnt" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v Line: 148
+Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
+Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
+Info (12128): Elaborating entity "counter" for hierarchy "reply:inst16|counter:overtime_cnt" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/reply.v Line: 159
+Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (15) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (15) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
+Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (15) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
 Info (12128): Elaborating entity "sttype" for hierarchy "sttype:inst3"
-Warning (10762): Verilog HDL Case Statement warning at sttype.v(40): can't check case statement for completeness because the case expression has too many possible states File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sttype.v Line: 40
+Warning (10762): Verilog HDL Case Statement warning at sttype.v(40): can't check case statement for completeness because the case expression has too many possible states File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sttype.v Line: 40
 Info (12128): Elaborating entity "sttxctrl" for hierarchy "sttxctrl:inst8"
 Info (12128): Elaborating entity "AutoRecognize" for hierarchy "AutoRecognize:inst13"
 Info (12128): Elaborating entity "cmdfifo" for hierarchy "cmdfifo:inst6"
-Warning (10230): Verilog HDL assignment warning at cmdfifo.v(219): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v Line: 219
-Warning (10230): Verilog HDL assignment warning at cmdfifo.v(70): truncated value with size 32 to match size of target (10) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v Line: 70
-Warning (10240): Verilog HDL Always Construct warning at cmdfifo.v(68): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v Line: 68
+Warning (10230): Verilog HDL assignment warning at cmdfifo.v(219): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v Line: 219
+Warning (10230): Verilog HDL assignment warning at cmdfifo.v(70): truncated value with size 32 to match size of target (10) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v Line: 70
+Warning (10240): Verilog HDL Always Construct warning at cmdfifo.v(68): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/cmdfifo.v Line: 68
 Info (12128): Elaborating entity "cmdstatus" for hierarchy "cmdstatus:inst11"
-Info (12128): Elaborating entity "fifo" for hierarchy "cmdstatus:inst11|fifo:f1" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 201
-Warning (10230): Verilog HDL assignment warning at fifo.v(81): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 81
-Info (12128): Elaborating entity "sync" for hierarchy "cmdstatus:inst11|sync:s1" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 239
-Warning (10230): Verilog HDL assignment warning at sync.v(30): truncated value with size 3 to match size of target (2) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync.v Line: 30
-Info (12128): Elaborating entity "sync" for hierarchy "cmdstatus:inst11|sync:s3" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 259
-Warning (10230): Verilog HDL assignment warning at sync.v(30): truncated value with size 24 to match size of target (16) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync.v Line: 30
+Info (12128): Elaborating entity "fifo" for hierarchy "cmdstatus:inst11|fifo:f1" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 202
+Warning (10230): Verilog HDL assignment warning at fifo.v(81): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 81
+Info (12128): Elaborating entity "sync" for hierarchy "cmdstatus:inst11|sync:s1" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 240
+Warning (10230): Verilog HDL assignment warning at sync.v(30): truncated value with size 3 to match size of target (2) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync.v Line: 30
+Info (12128): Elaborating entity "sync" for hierarchy "cmdstatus:inst11|sync:s3" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/cmdstatus.v Line: 260
+Warning (10230): Verilog HDL assignment warning at sync.v(30): truncated value with size 24 to match size of target (16) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/sync.v Line: 30
 Info (12128): Elaborating entity "cmdtxctrl" for hierarchy "cmdtxctrl:inst5"
 Info (12128): Elaborating entity "Send_interval" for hierarchy "Send_interval:inst12"
-Info (12128): Elaborating entity "counter_32b" for hierarchy "Send_interval:inst12|counter_32b:c1" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Send_interval.v Line: 32
+Info (12128): Elaborating entity "counter_32b" for hierarchy "Send_interval:inst12|counter_32b:c1" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/Send_interval.v Line: 32
 Info (12128): Elaborating entity "timingctrl" for hierarchy "timingctrl:inst9"
-Info (12128): Elaborating entity "counter" for hierarchy "timingctrl:inst9|counter:c2" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 152
-Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
-Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
-Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
+Info (12128): Elaborating entity "counter" for hierarchy "timingctrl:inst9|counter:c2" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/timingctrl.v Line: 152
+Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
+Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
 Info (12128): Elaborating entity "or16to8" for hierarchy "or16to8:inst40"
 Info (12128): Elaborating entity "mux8" for hierarchy "mux8:inst19"
 Info (12128): Elaborating entity "PLL80_30" for hierarchy "PLL80_30:inst18"
-Info (12128): Elaborating entity "PLL80_30_0002" for hierarchy "PLL80_30:inst18|PLL80_30_0002:pll80_30_inst" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30.v Line: 22
-Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL80_30:inst18|PLL80_30_0002:pll80_30_inst|altera_pll:altera_pll_i" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v Line: 88
+Info (12128): Elaborating entity "PLL80_30_0002" for hierarchy "PLL80_30:inst18|PLL80_30_0002:pll80_30_inst" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30.v Line: 22
+Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL80_30:inst18|PLL80_30_0002:pll80_30_inst|altera_pll:altera_pll_i" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v Line: 88
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "PLL80_30:inst18|PLL80_30_0002:pll80_30_inst|altera_pll:altera_pll_i" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v Line: 88
-Info (12133): Instantiated megafunction "PLL80_30:inst18|PLL80_30_0002:pll80_30_inst|altera_pll:altera_pll_i" with the following parameter: File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v Line: 88
+Info (12130): Elaborated megafunction instantiation "PLL80_30:inst18|PLL80_30_0002:pll80_30_inst|altera_pll:altera_pll_i" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v Line: 88
+Info (12133): Instantiated megafunction "PLL80_30:inst18|PLL80_30_0002:pll80_30_inst|altera_pll:altera_pll_i" with the following parameter: File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/PLL80_30/PLL80_30_0002.v Line: 88
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "12.0 MHz"
     Info (12134): Parameter "operation_mode" = "normal"
@@ -3339,21 +3335,21 @@ Info (12133): Instantiated megafunction "PLL80_30:inst18|PLL80_30_0002:pll80_30_
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "FIFO2Usb_Asyn" for hierarchy "FIFO2Usb_Asyn:inst25"
-Warning (10230): Verilog HDL assignment warning at FIFO2Usb_Asyn.v(174): truncated value with size 8 to match size of target (1) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 174
-Warning (10230): Verilog HDL assignment warning at FIFO2Usb_Asyn.v(208): truncated value with size 8 to match size of target (1) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 208
-Info (12128): Elaborating entity "fifo" for hierarchy "FIFO2Usb_Asyn:inst25|fifo:wr" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 91
-Warning (10230): Verilog HDL assignment warning at fifo.v(81): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 81
-Info (12128): Elaborating entity "fifo" for hierarchy "FIFO2Usb_Asyn:inst25|fifo:rd" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 111
-Warning (10230): Verilog HDL assignment warning at fifo.v(81): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 81
-Info (12128): Elaborating entity "counter" for hierarchy "FIFO2Usb_Asyn:inst25|counter:sendcnt" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 122
-Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
-Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
-Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (13) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
+Warning (10230): Verilog HDL assignment warning at FIFO2Usb_Asyn.v(174): truncated value with size 8 to match size of target (1) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 174
+Warning (10230): Verilog HDL assignment warning at FIFO2Usb_Asyn.v(208): truncated value with size 8 to match size of target (1) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 208
+Info (12128): Elaborating entity "fifo" for hierarchy "FIFO2Usb_Asyn:inst25|fifo:wr" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 91
+Warning (10230): Verilog HDL assignment warning at fifo.v(81): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 81
+Info (12128): Elaborating entity "fifo" for hierarchy "FIFO2Usb_Asyn:inst25|fifo:rd" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 111
+Warning (10230): Verilog HDL assignment warning at fifo.v(81): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/fifo.v Line: 81
+Info (12128): Elaborating entity "counter" for hierarchy "FIFO2Usb_Asyn:inst25|counter:sendcnt" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/ASYNC/FIFO2Usb_Asyn.v Line: 122
+Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
+Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (13) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
 Info (12128): Elaborating entity "sync1" for hierarchy "sync1:inst26"
 Info (12128): Elaborating entity "CDC" for hierarchy "CDC:inst24"
-Info (12128): Elaborating entity "dcfifo" for hierarchy "CDC:inst24|dcfifo:dcfifo_component" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v Line: 76
-Info (12130): Elaborated megafunction instantiation "CDC:inst24|dcfifo:dcfifo_component" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v Line: 76
-Info (12133): Instantiated megafunction "CDC:inst24|dcfifo:dcfifo_component" with the following parameter: File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v Line: 76
+Info (12128): Elaborating entity "dcfifo" for hierarchy "CDC:inst24|dcfifo:dcfifo_component" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v Line: 76
+Info (12130): Elaborated megafunction instantiation "CDC:inst24|dcfifo:dcfifo_component" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v Line: 76
+Info (12133): Instantiated megafunction "CDC:inst24|dcfifo:dcfifo_component" with the following parameter: File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/CDC.v Line: 76
     Info (12134): Parameter "intended_device_family" = "Cyclone V"
     Info (12134): Parameter "lpm_numwords" = "4"
     Info (12134): Parameter "lpm_showahead" = "OFF"
@@ -3366,47 +3362,47 @@ Info (12133): Instantiated megafunction "CDC:inst24|dcfifo:dcfifo_component" wit
     Info (12134): Parameter "use_eab" = "ON"
     Info (12134): Parameter "wrsync_delaypipe" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_5ok1.tdf
-    Info (12023): Found entity 1: dcfifo_5ok1 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 41
-Info (12128): Elaborating entity "dcfifo_5ok1" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf Line: 191
+    Info (12023): Found entity 1: dcfifo_5ok1 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 41
+Info (12128): Elaborating entity "dcfifo_5ok1" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dcfifo.tdf Line: 191
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_7g6.tdf
-    Info (12023): Found entity 1: a_graycounter_7g6 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/a_graycounter_7g6.tdf Line: 25
-Info (12128): Elaborating entity "a_graycounter_7g6" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|a_graycounter_7g6:rdptr_g1p" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 52
+    Info (12023): Found entity 1: a_graycounter_7g6 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/a_graycounter_7g6.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_7g6" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|a_graycounter_7g6:rdptr_g1p" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 52
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_3ub.tdf
-    Info (12023): Found entity 1: a_graycounter_3ub File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/a_graycounter_3ub.tdf Line: 25
-Info (12128): Elaborating entity "a_graycounter_3ub" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|a_graycounter_3ub:wrptr_g1p" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 53
+    Info (12023): Found entity 1: a_graycounter_3ub File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/a_graycounter_3ub.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_3ub" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|a_graycounter_3ub:wrptr_g1p" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 53
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8fa1.tdf
-    Info (12023): Found entity 1: altsyncram_8fa1 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_8fa1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_8fa1" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|altsyncram_8fa1:fifo_ram" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 54
+    Info (12023): Found entity 1: altsyncram_8fa1 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_8fa1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_8fa1" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|altsyncram_8fa1:fifo_ram" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_b9l.tdf
-    Info (12023): Found entity 1: alt_synch_pipe_b9l File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_b9l.tdf Line: 27
-Info (12128): Elaborating entity "alt_synch_pipe_b9l" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|alt_synch_pipe_b9l:rs_dgwp" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 73
+    Info (12023): Found entity 1: alt_synch_pipe_b9l File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_b9l.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_b9l" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|alt_synch_pipe_b9l:rs_dgwp" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 73
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_su8.tdf
-    Info (12023): Found entity 1: dffpipe_su8 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dffpipe_su8.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_su8" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|alt_synch_pipe_b9l:rs_dgwp|dffpipe_su8:dffpipe10" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_b9l.tdf Line: 34
+    Info (12023): Found entity 1: dffpipe_su8 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dffpipe_su8.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_su8" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|alt_synch_pipe_b9l:rs_dgwp|dffpipe_su8:dffpipe10" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_b9l.tdf Line: 34
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_c9l.tdf
-    Info (12023): Found entity 1: alt_synch_pipe_c9l File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_c9l.tdf Line: 27
-Info (12128): Elaborating entity "alt_synch_pipe_c9l" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|alt_synch_pipe_c9l:ws_dgrp" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 74
+    Info (12023): Found entity 1: alt_synch_pipe_c9l File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_c9l.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_c9l" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|alt_synch_pipe_c9l:ws_dgrp" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 74
 Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_tu8.tdf
-    Info (12023): Found entity 1: dffpipe_tu8 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dffpipe_tu8.tdf Line: 25
-Info (12128): Elaborating entity "dffpipe_tu8" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|alt_synch_pipe_c9l:ws_dgrp|dffpipe_tu8:dffpipe13" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_c9l.tdf Line: 34
+    Info (12023): Found entity 1: dffpipe_tu8 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dffpipe_tu8.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_tu8" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|alt_synch_pipe_c9l:ws_dgrp|dffpipe_tu8:dffpipe13" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_synch_pipe_c9l.tdf Line: 34
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_qu5.tdf
-    Info (12023): Found entity 1: cmpr_qu5 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/cmpr_qu5.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_qu5" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|cmpr_qu5:rdempty_eq_comp1_lsb" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 75
+    Info (12023): Found entity 1: cmpr_qu5 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/cmpr_qu5.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_qu5" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|cmpr_qu5:rdempty_eq_comp1_lsb" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 75
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_pu5.tdf
-    Info (12023): Found entity 1: cmpr_pu5 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/cmpr_pu5.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_pu5" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|cmpr_pu5:rdempty_eq_comp1_msb" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 76
+    Info (12023): Found entity 1: cmpr_pu5 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/cmpr_pu5.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_pu5" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|cmpr_pu5:rdempty_eq_comp1_msb" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 76
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_5r7.tdf
-    Info (12023): Found entity 1: mux_5r7 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/mux_5r7.tdf Line: 23
-Info (12128): Elaborating entity "mux_5r7" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|mux_5r7:rdemp_eq_comp_lsb_mux" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 83
+    Info (12023): Found entity 1: mux_5r7 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/mux_5r7.tdf Line: 23
+Info (12128): Elaborating entity "mux_5r7" for hierarchy "CDC:inst24|dcfifo:dcfifo_component|dcfifo_5ok1:auto_generated|mux_5r7:rdemp_eq_comp_lsb_mux" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/dcfifo_5ok1.tdf Line: 83
 Info (12128): Elaborating entity "valid_data" for hierarchy "valid_data:inst23"
 Info (12128): Elaborating entity "decoder_8b10b" for hierarchy "decoder_8b10b:inst22"
-Warning (10036): Verilog HDL or VHDL warning at decoder.v(77): object "P04" assigned a value but never read File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/decoder.v Line: 77
-Warning (10036): Verilog HDL or VHDL warning at decoder.v(81): object "P40" assigned a value but never read File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/decoder.v Line: 81
+Warning (10036): Verilog HDL or VHDL warning at decoder.v(77): object "P04" assigned a value but never read File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/decoder.v Line: 77
+Warning (10036): Verilog HDL or VHDL warning at decoder.v(81): object "P40" assigned a value but never read File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/decoder.v Line: 81
 Info (12128): Elaborating entity "rx_stop" for hierarchy "rx_stop:inst21"
-Info (12128): Elaborating entity "counter" for hierarchy "rx_stop:inst21|counter:c10" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/rx_stop.v Line: 55
-Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
-Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
-Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (5) File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
+Info (12128): Elaborating entity "counter" for hierarchy "rx_stop:inst21|counter:c10" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/SCI/rx_stop.v Line: 55
+Warning (10230): Verilog HDL assignment warning at counter.v(32): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at counter.v(34): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 34
+Warning (10230): Verilog HDL assignment warning at counter.v(36): truncated value with size 32 to match size of target (5) File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/counter.v Line: 36
 Warning (276020): Inferred RAM node "FIFO2Usb_Asyn:inst25|fifo:wr|buffer_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "cmdstatus:inst11|fifo:f1|buffer_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "cmdfifo:inst6|buffer_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
@@ -3476,7 +3472,7 @@ Info (19000): Inferred 4 megafunctions from design logic
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "UART:inst10|Div0" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 76
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "UART:inst10|Div0" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 76
 Info (12130): Elaborated megafunction instantiation "cmdfifo:inst6|altsyncram:buffer_rtl_0"
 Info (12133): Instantiated megafunction "cmdfifo:inst6|altsyncram:buffer_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -3494,11 +3490,11 @@ Info (12133): Instantiated megafunction "cmdfifo:inst6|altsyncram:buffer_rtl_0" 
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ick1.tdf
-    Info (12023): Found entity 1: altsyncram_ick1 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_ick1.tdf Line: 32
+    Info (12023): Found entity 1: altsyncram_ick1 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_ick1.tdf Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_tma.tdf
-    Info (12023): Found entity 1: decode_tma File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/decode_tma.tdf Line: 23
+    Info (12023): Found entity 1: decode_tma File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/decode_tma.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_dhb.tdf
-    Info (12023): Found entity 1: mux_dhb File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/mux_dhb.tdf Line: 23
+    Info (12023): Found entity 1: mux_dhb File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/mux_dhb.tdf Line: 23
 Info (12130): Elaborated megafunction instantiation "fifo:inst30|altsyncram:buffer_rtl_0"
 Info (12133): Instantiated megafunction "fifo:inst30|altsyncram:buffer_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -3517,7 +3513,7 @@ Info (12133): Instantiated megafunction "fifo:inst30|altsyncram:buffer_rtl_0" wi
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7oo1.tdf
-    Info (12023): Found entity 1: altsyncram_7oo1 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_7oo1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_7oo1 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_7oo1.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "FIFO2Usb_Asyn:inst25|fifo:wr|altsyncram:buffer_rtl_0"
 Info (12133): Instantiated megafunction "FIFO2Usb_Asyn:inst25|fifo:wr|altsyncram:buffer_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -3536,7 +3532,7 @@ Info (12133): Instantiated megafunction "FIFO2Usb_Asyn:inst25|fifo:wr|altsyncram
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3vo1.tdf
-    Info (12023): Found entity 1: altsyncram_3vo1 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_3vo1.tdf Line: 32
+    Info (12023): Found entity 1: altsyncram_3vo1 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_3vo1.tdf Line: 32
 Info (12130): Elaborated megafunction instantiation "cmdstatus:inst11|fifo:f1|altsyncram:buffer_rtl_0"
 Info (12133): Instantiated megafunction "cmdstatus:inst11|fifo:f1|altsyncram:buffer_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -3555,29 +3551,29 @@ Info (12133): Instantiated megafunction "cmdstatus:inst11|fifo:f1|altsyncram:buf
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1jo1.tdf
-    Info (12023): Found entity 1: altsyncram_1jo1 File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_1jo1.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "UART:inst10|lpm_divide:Div0" File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 76
-Info (12133): Instantiated megafunction "UART:inst10|lpm_divide:Div0" with the following parameter: File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 76
+    Info (12023): Found entity 1: altsyncram_1jo1 File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/altsyncram_1jo1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "UART:inst10|lpm_divide:Div0" File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 76
+Info (12133): Instantiated megafunction "UART:inst10|lpm_divide:Div0" with the following parameter: File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/RS422_20240114/UART/UART.v Line: 76
     Info (12134): Parameter "LPM_WIDTHN" = "24"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4dm.tdf
-    Info (12023): Found entity 1: lpm_divide_4dm File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/lpm_divide_4dm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_4dm File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/lpm_divide_4dm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/sign_div_unsign_9nh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/sign_div_unsign_9nh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
-    Info (12023): Found entity 1: alt_u_div_o2f File: E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_u_div_o2f.tdf Line: 23
+    Info (12023): Found entity 1: alt_u_div_o2f File: G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/db/alt_u_div_o2f.tdf Line: 23
 Warning (12241): 20 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SIWU_N" is stuck at VCC
     Warning (13410): Pin "pin_name1" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 22 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.map.smsg
+Info (144001): Generated suppressed messages file G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 15 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
+Warning: RST port on the PLL is not properly connected on instance PLL12:inst1|PLL12_0002:pll12_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
 Info (21057): Implemented 9567 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
@@ -3586,15 +3582,15 @@ Info (21057): Implemented 9567 device resources after synthesis - the final reso
     Info (21064): Implemented 280 RAM segments
     Info (21065): Implemented 3 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 111 warnings
-    Info: Peak virtual memory: 4997 megabytes
-    Info: Processing ended: Wed Jun 05 20:44:07 2024
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4958 megabytes
+    Info: Processing ended: Thu Sep 12 16:43:11 2024
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:35
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in E:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.map.smsg.
+The suppressed messages can be found in G:/CE7/Hardware/CMD_SCI_20240604_AutoCOM/output_files/CMDSCI.map.smsg.
 
 
